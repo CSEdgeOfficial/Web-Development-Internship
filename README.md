@@ -165,7 +165,7 @@ A: If you encounter an issue or bug during the development process while working
 
 #### Q: Are there any resources available to assist with the tasks within my named folder?
 
-A: Yes, we recommend checking out the official documentation for the technologies involved, as well as tutorials and guides available on websites like FreeCodeCamp, Udemy, and Coursera.
+A: Yes, we recommend checking out the official resource page that includes all the neccessary resources [Click Here](https://csedge.courses/Resources.html).
 
 #### Q: Is there a deadline for completing the tasks within my named folder?
 
