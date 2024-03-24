@@ -71,103 +71,87 @@ Good luck, and happy coding!
 Easy Level Tasks:
 ----------------
 
-Task 1: Build a simple landing page
---------------------------------------
+Task 1: Simple Landing Page
+-----------------------------
 
 Create a responsive landing page containing the following elements:
 
-* Header section with logo and navigation menu
-* Hero section with background image and title
-* Features section highlighting four features of CSEdge
-* Testimonial section featuring two testimonials
-* Contact Us section with a contact form and social media links
+- Header section with logo and navigation menu
+- Hero section with background image and title
+- Features section highlighting four features of CSEdge
+- Testimonial section featuring two testimonials
+- Contact Us section with a contact form and social media links
 
-Task 2: Implement a photo gallery
-------------------------------------
+Task 2: Photo Gallery
+----------------------
 
 Design a lightbox-enabled photo gallery that displays multiple photos on click. Ensure that the following features are included:
 
-* Display thumbnail previews of all images
-* Allow clicking on thumbnails to open the respective image in a modal window
-* Provide close functionality to exit the modal window
-* Responsive design for optimal viewing on mobile devices
+- Display thumbnail previews of all images
+- Allow clicking on thumbnails to open the respective image in a modal window
+- Provide close functionality to exit the modal window
+- Responsive design for optimal viewing on mobile devices
 
-Task 3: Generate dynamic table contents
-------------------------------------------
-
-Using JSON data, build a table that dynamically loads its contents. The table should include the following features:
-
-* Pagination control allowing users to navigate between pages
-* Sorting functionality on columns
-* Search box enabling filtering by keyword
-
-Task 4: Design a portfolio site
----------------------------------
+Task 3: Portfolio
+-------------------
 
 Create a minimalistic website showcasing five of your past web development projects. Each project listing should contain the following:
 
-* Title and brief description
-* Screenshot or demo video
-* Technologies used
-* Live preview / GitHub repository link
+- Title and brief description
+- Screenshot or demo video
+- Technologies used
+- Live preview / GitHub repository link
+
+Task 4: Student Enrollment Form
+--------------------------------
+
+Develop a student enrollment form for a fictional educational institution. Include fields for the student's name, email, phone number, course selection, and additional comments. Implement form validation to ensure accurate data submission.
 
 Medium Level Tasks:
 -------------------
 
-Task 5: Develop a quiz app
-------------------------------
+Task 5: To-Do List
+-------------------
 
-Build a functional online quiz application consisting of multiple-choice questions with instant feedback upon submission. Key requirements include:
+Create a dynamic to-do list application that allows users to add, edit, delete, and mark tasks as completed. Include features such as sorting tasks by priority, due date, or completion status.
 
-* Ten questions randomly picked from a pool of fifty
-* Automatic grading mechanism for submitted answers
-* Progress bar indicating completion status
-* Feedback system providing explanations for right and wrong answers
+Task 6: Calculator
+--------------------
 
-Task 6: Create a sticky navbar
---------------------------------
+Develop a functional calculator application capable of performing basic arithmetic operations (addition, subtraction, multiplication, division). Ensure an intuitive user interface with responsive design for seamless interaction on various devices.
 
-Implement a scroll-aware header that remains visible at the top of the viewport while scrolling down the page. Requirements include:
+Task 7: Quiz Web
+------------------
 
-* Transparent header initially
-* Solid background color upon scrolling
-* Smooth animation effect
+Build an interactive quiz web application featuring multiple-choice questions on various topics. Include a timer for each question, a scoring mechanism, and feedback for correct and incorrect answers. Provide users with the option to review their quiz results.
 
-Task 7: Implement local storage
-----------------------------------
+Task 8: Advanced Calculator
+----------------------------
 
-Persistently save user preferences such as theme, language, and screen size across browser sessions. Utilize the localStorage API to achieve this goal.
-
-Task 8: Form validation and sanitization
--------------------------------------------
-
-Validate and sanitize user input collected from forms. Ensure that all fields meet specified criteria and prevent invalid submissions. Key considerations are:
-
-* Required field checks
-* Length limits
-* Format validators (email, phone number, etc.)
-* Custom error handling and messaging
+Enhance the functionality of the basic calculator by incorporating advanced features such as unit converters (length, weight, temperature, etc.), currency conversion, and real-time updates on stock prices or cryptocurrency rates. Implement an intuitive interface with responsive design to accommodate diverse user needs.
 
 Hard Level Tasks:
 -----------------
 
-Task 9: Parallax scrolling effect
--------------------------------------
+Task 9: QR Code Generator
+---------------------------
 
-Achieve a parallax scrolling effect on a long vertical webpage containing several sections. Apply varying scroll speeds for foreground and background layers.
+Develop a QR code generator web application that allows users to generate QR codes for various purposes, such as URL links, contact information, Wi-Fi network details, and text messages. Ensure the application supports customization options for QR code size, color, and error correction level.
 
-Task 10: Chatbot implementation
-----------------------------------
+Task 10: Tic Tac Toe
+----------------------
 
-Integrate a third-party chatbot widget into a webpage, ensuring compatibility and proper styling. Alternatively, implement a basic conversational AI using natural language processing libraries.
+Implement a classic Tic Tac Toe game with multiplayer functionality, allowing two players to compete against each other in real-time. Include features such as game state management, win detection, and a user-friendly interface with responsive design for seamless gameplay on both desktop and mobile devices.
 
-Task 11: Recipe Finder
------------------------
-Develop a recipe finder that searches for recipes based on ingredients entered by the user. Display results from Spoonacular or another public API.
+Task 11: Tesla/Apple Web Page Redesign
+----------------------------------------
 
-Task 12: Note Taking App
-------------------------
-Build a note taking app that syncs notes across devices using Firebase Realtime Database or another cloud service. Enable sharing of notes via email or direct link.
+Redesign the official website of either Tesla or Apple, focusing on modernizing the user interface, enhancing user experience, and incorporating innovative design elements. Utilize Bootstrap and Tailwind CSS frameworks to streamline the development process and ensure responsiveness across various screen sizes.
+
+Task 12: Blog Using Markdown Articles
+---------------------------------------
+
+Create a dynamic blog web application that allows users to publish articles written in Markdown format. Implement features such as user authentication, article CRUD operations, rich text editing using Markdown syntax, and comments section for reader engagement. Utilize Firebase or another cloud service for backend data storage and authentication.
 
 ### FAQ
 
