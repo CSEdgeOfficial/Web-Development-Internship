@@ -1,4 +1,4 @@
-# Web-Development-Projects
+# Web-Development-Internship
 
 Title: Web Development Internship Tasks <br>
 Subtitle: CSEdge Internship Program <br>
