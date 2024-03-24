@@ -33,11 +33,13 @@ When you have completed a task, create a separate folder within your named folde
 Table of Contents:
 ------------------
 
-* Introduction
-* Easy Level Tasks
-* Medium Level Tasks
-* Hard Level Tasks
-* Conclusion
+* [Introduction](#introduction)
+* [Easy Level Tasks](#easy-level)
+* [Medium Level Tasks](#medium-level)
+* [Hard Level Tasks](#hard-level)
+* [Conclusion](#conclusion)
+
+<a id="introduction"></a>
 
 Introduction:
 ------------
@@ -68,90 +70,92 @@ To kick off your internship, we have prepared a set of tasks for you to work on.
 
 Good luck, and happy coding!
 
+<a id="easy-level"></a>
+
 Easy Level Tasks:
 ----------------
 
-Task 1: Simple Landing Page
------------------------------
+1. Simple Landing Page
+   - Create a responsive landing page with:
+     - Header section with logo and navigation menu
+     - Hero section with background image and title
+     - Features section highlighting four features of CSEdge
+     - Testimonial section featuring two testimonials
+     - Contact Us section with a contact form and social media links
 
-Create a responsive landing page containing the following elements:
+2. Photo Gallery
+   - Design a lightbox-enabled photo gallery with:
+     - Thumbnail previews of all images
+     - Clickable thumbnails to open respective images in a modal window
+     - Close functionality to exit the modal window
+     - Responsive design for optimal viewing on mobile devices
 
-- Header section with logo and navigation menu
-- Hero section with background image and title
-- Features section highlighting four features of CSEdge
-- Testimonial section featuring two testimonials
-- Contact Us section with a contact form and social media links
+3. Portfolio
+   - Create a minimalistic website showcasing five past web development projects with:
+     - Title and brief description
+     - Screenshot or demo video
+     - Technologies used
+     - Live preview / GitHub repository link
 
-Task 2: Photo Gallery
-----------------------
+4. Student Enrollment Form
+   - Develop a student enrollment form for a fictional educational institution with fields for:
+     - Student's name, email, phone number
+     - Course selection
+     - Additional comments
+   - Implement form validation for accurate data submission
 
-Design a lightbox-enabled photo gallery that displays multiple photos on click. Ensure that the following features are included:
-
-- Display thumbnail previews of all images
-- Allow clicking on thumbnails to open the respective image in a modal window
-- Provide close functionality to exit the modal window
-- Responsive design for optimal viewing on mobile devices
-
-Task 3: Portfolio
--------------------
-
-Create a minimalistic website showcasing five of your past web development projects. Each project listing should contain the following:
-
-- Title and brief description
-- Screenshot or demo video
-- Technologies used
-- Live preview / GitHub repository link
-
-Task 4: Student Enrollment Form
---------------------------------
-
-Develop a student enrollment form for a fictional educational institution. Include fields for the student's name, email, phone number, course selection, and additional comments. Implement form validation to ensure accurate data submission.
+<a id="medium-level"></a>
 
 Medium Level Tasks:
 -------------------
 
-Task 5: To-Do List
--------------------
+5. To-Do List
+   - Create a dynamic to-do list application allowing users to:
+     - Add, edit, delete, and mark tasks as completed
+     - Sort tasks by priority, due date, or completion status
 
-Create a dynamic to-do list application that allows users to add, edit, delete, and mark tasks as completed. Include features such as sorting tasks by priority, due date, or completion status.
+6. Calculator
+   - Develop a functional calculator application capable of:
+     - Performing basic arithmetic operations
+     - Ensuring an intuitive user interface with responsive design
 
-Task 6: Calculator
---------------------
+7. Quiz Web
+   - Build an interactive quiz web application featuring:
+     - Multiple-choice questions on various topics
+     - Timer for each question, scoring mechanism, and feedback for answers
+     - Option for users to review their quiz results
 
-Develop a functional calculator application capable of performing basic arithmetic operations (addition, subtraction, multiplication, division). Ensure an intuitive user interface with responsive design for seamless interaction on various devices.
+8. Advanced Calculator
+   - Enhance basic calculator functionality by incorporating:
+     - Unit converters, currency conversion, and real-time updates on stock prices or cryptocurrency rates
+     - Intuitive interface with responsive design for diverse user needs
 
-Task 7: Quiz Web
-------------------
-
-Build an interactive quiz web application featuring multiple-choice questions on various topics. Include a timer for each question, a scoring mechanism, and feedback for correct and incorrect answers. Provide users with the option to review their quiz results.
-
-Task 8: Advanced Calculator
-----------------------------
-
-Enhance the functionality of the basic calculator by incorporating advanced features such as unit converters (length, weight, temperature, etc.), currency conversion, and real-time updates on stock prices or cryptocurrency rates. Implement an intuitive interface with responsive design to accommodate diverse user needs.
+<a id="hard-level"></a>
 
 Hard Level Tasks:
 -----------------
 
-Task 9: QR Code Generator
----------------------------
+9. QR Code Generator
+   - Develop a web application for generating QR codes with options for:
+     - URL links, contact information, Wi-Fi network details, and text messages
+     - Customization of QR code size, color, and error correction level
 
-Develop a QR code generator web application that allows users to generate QR codes for various purposes, such as URL links, contact information, Wi-Fi network details, and text messages. Ensure the application supports customization options for QR code size, color, and error correction level.
+10. Tic Tac Toe
+    - Implement a classic Tic Tac Toe game with:
+      - Multiplayer functionality for real-time competition
+      - Game state management, win detection, and responsive design for seamless gameplay
 
-Task 10: Tic Tac Toe
-----------------------
+11. Tesla/Apple Web Page Redesign
+    - Redesign the official website of Tesla or Apple, focusing on:
+      - Modernizing the user interface and enhancing user experience
+      - Incorporating innovative design elements using Bootstrap and Tailwind CSS frameworks
 
-Implement a classic Tic Tac Toe game with multiplayer functionality, allowing two players to compete against each other in real-time. Include features such as game state management, win detection, and a user-friendly interface with responsive design for seamless gameplay on both desktop and mobile devices.
+12. Blog Using Markdown Articles
+    - Create a dynamic blog web application allowing users to publish articles in Markdown format with:
+      - User authentication, article CRUD operations, and rich text editing using Markdown syntax
+      - Comments section for reader engagement and backend data storage/authentication using Firebase or other cloud services
 
-Task 11: Tesla/Apple Web Page Redesign
-----------------------------------------
-
-Redesign the official website of either Tesla or Apple, focusing on modernizing the user interface, enhancing user experience, and incorporating innovative design elements. Utilize Bootstrap and Tailwind CSS frameworks to streamline the development process and ensure responsiveness across various screen sizes.
-
-Task 12: Blog Using Markdown Articles
----------------------------------------
-
-Create a dynamic blog web application that allows users to publish articles written in Markdown format. Implement features such as user authentication, article CRUD operations, rich text editing using Markdown syntax, and comments section for reader engagement. Utilize Firebase or another cloud service for backend data storage and authentication.
+<a id="conclusion"></a>
 
 ### FAQ
 
