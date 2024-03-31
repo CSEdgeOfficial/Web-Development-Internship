@@ -33,11 +33,11 @@ When you have completed a task, create a separate folder within your named folde
 Table of Contents:
 ------------------
 
-* [Introduction](#introduction)
-* [Easy Level Tasks](#easy-level)
-* [Medium Level Tasks](#medium-level)
-* [Hard Level Tasks](#hard-level)
-* [Conclusion](#conclusion)
+<a href="#introduction"><img alt="Intro" src="https://img.shields.io/badge/Introduction%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#easy-level"><img alt="easy-level" src="https://img.shields.io/badge/Easy Level%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#medium-level"><img alt="medium-level" src="https://img.shields.io/badge/Medium Level%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#hard-level"><img alt="hard-level" src="https://img.shields.io/badge/Hard Level%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
+<a href="#conclusion"><img alt="conclusion" src="https://img.shields.io/badge/Conclusion%20-%23E34F26.svg?&style=for-the-badge"/></a> <br>
 
 <a id="introduction"></a>
 
