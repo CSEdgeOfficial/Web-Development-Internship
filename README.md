@@ -13,11 +13,11 @@ To begin working on the projects, follow these steps:
 
 1. Clone the repository to your local machine using the command:
 ```bash
-git clone https://github.com/CSEdgeOfficial/Web-Development-Projects/
+git clone https://github.com/CSEdgeOfficial/Web-Development-Internship/
 ```
 2. Navigate to the cloned directory:
 ```bash
-cd Web-Development-Projects
+cd Web-Development-Internship
 ```
 3. Create a new folder with your full name to store your projects:
 ```bash
