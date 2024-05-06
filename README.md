@@ -8,7 +8,6 @@ Questions per Level: 4 <br>
 Total Questions: 12 <br>
 
  ### Installation
-
 To begin working on the projects, follow these steps: 
 
 1. Clone the repository to your local machine using the command:
