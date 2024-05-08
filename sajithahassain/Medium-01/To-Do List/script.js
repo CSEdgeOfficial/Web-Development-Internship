@@ -1,163 +1,95 @@
-let quizContainer;
-let userAnswers=[];
-const quizData = [
-    {
-        question: "What is the capital of France?",
-        choices: ["Paris", "London", "Berlin", "Rome"],
-        correctAnswer: "Paris"
-    },
-     {
-        question: "What is the largest planet in our solar system?",
-        choices: ["Mercury", "Venus", "Earth", "Jupiter"],
-        correctAnswer: "Jupiter",
-       
-    },
-    {
-        question: "Who wrote 'Romeo and Juliet'?",
-        choices: ["Shakespeare", "Hemingway", "Twain", "Tolkien"],
-        correctAnswer: "Shakespeare",
-        
-    },
-    {
-        question: "What is the chemical symbol for gold?",
-        choices: ["Au", "Ag", "Cu", "Fe"],
-        correctAnswer: "Au",
-      
-    },
-    {
-        question: "What is the capital of Japan?",
-        choices: ["Tokyo", "Seoul", "Beijing", "Bangkok"],
-        correctAnswer: "Tokyo",
-     
-    },
-    {
-        question: "Who painted the Mona Lisa?",
-        choices: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"],
-        correctAnswer: "Leonardo da Vinci",
-       
-    },
-    {
-        question: "What is the chemical symbol for water?",
-        choices: ["H2O", "CO2", "NaCl", "O2"],
-        correctAnswer: "H2O",
-       
-    },
-    {
-        question: "Which planet is known as the Red Planet?",
-        choices: ["Mars", "Venus", "Jupiter", "Mercury"],
-        correctAnswer: "Mars",
-        
-    },
-    {
-        question: "Who developed the theory of relativity?",
-        choices: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Stephen Hawking"],
-        correctAnswer: "Albert Einstein",
+let tasks = [];
+
+function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskDescription = taskInput.value.trim();
+    const taskPriority = document.querySelector('input[name="priority"]:checked');
+    const taskDueDate = document.getElementById('dueDateInput').value;
+
+    if (taskDescription !== '' && taskPriority && taskDueDate !== '') {
+        tasks.push({ 
+            description: taskDescription, 
+            priority: taskPriority.value, 
+            dueDate: taskDueDate, 
+            completed: false 
+        });
+        renderTasks();
+        taskInput.value = '';
+        document.getElementById('dueDateInput').value = '';
+        document.querySelectorAll('input[name="priority"]').forEach(input => input.checked = false);
+    } else {
+        alert('Please fill out all fields.');
+    }
+}
+
+function deleteTask(index) {
+    tasks.splice(index, 1);
+    renderTasks();
+}
+// Function to edit task details
+function editTask(index) {
+    const task = tasks[index];
     
-    },
-    {
-        question: "What is the chemical symbol for sodium?",
-        choices: ["Na", "K", "Ca", "Fe"],
-        correctAnswer: "Na",
-       
+    // Ask user for new task details
+    const newDescription = prompt('Enter new task description:', task.description);
+    const newPriority = prompt('Enter new priority (High, Medium, Low):', task.priority);
+    const newDueDate = prompt('Enter new due date (YYYY-MM-DD):', task.dueDate);
+    
+    // Update task with new details if provided
+    if (newDescription !== null && newDescription.trim() !== '') {
+        task.description = newDescription.trim();
     }
-
-    // Add more questions here
-];
-
-let currentQuestion = 0;
-let score = 0;
-let timer;
-
-          
-
-function startQuiz() {
-    quizContainer = document.getElementById('quiz-container');
-    quizContainer.style.display="block";
-    userAnswers =[];
-    showQuestion();
-    startTimer();
-}
-
-function showQuestion() {
-    const questionElement = document.getElementById('question');
-    const choicesElement = document.getElementById('choices');
-    const currentQuizData = quizData[currentQuestion];
-
-    questionElement.innerText = currentQuizData.question;
-    choicesElement.innerHTML = "";
-
-    currentQuizData.choices.forEach(choice => {
-        const choiceButton = document.createElement('button');
-        choiceButton.innerText = choice;
-        choiceButton.classList.add('choice-btn');
-        choiceButton.addEventListener('click', () => checkAnswer(choice));
-        choicesElement.appendChild(choiceButton);
-    });
-}
-
-function checkAnswer(choice) {
-    const currentQuizData = quizData[currentQuestion];
-    userAnswers.push(choice);
-    clearInterval(timer); // Stop the timer
-    if (choice === currentQuizData.correctAnswer) {
-        score++;
-        showFeedback("Correct!", "green");
-    } else {
-        showFeedback("Wrong!", "red");
-        setTimeout(nextQuestion, 1000); // Navigate to next question after 1 second
+    if (newPriority !== null && ['High', 'Medium', 'Low'].includes(newPriority.trim())) {
+        task.priority = newPriority.trim();
     }
+    if (newDueDate !== null && newDueDate.trim() !== '') {
+        task.dueDate = newDueDate.trim();
+    }
+    
+    renderTasks(); // Re-render the tasks list
 }
 
-function endQuiz() {
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.innerHTML = `
-        <h2>Quiz Complete!</h2>
-        <p>Your score: ${score}/${quizData.length}</p>
-        <button onclick="reviewScores()">Review Scores</button>
-    `;
+function toggleCompletion(index) {
+    tasks[index].completed = !tasks[index].completed;
+    renderTasks();
 }
 
-function reviewScores() {
-    const quizContainer = document.getElementById('quiz-container');
-    let reviewHTML = '<h2>Review Scores</h2>';
-    quizData.forEach((question, index) => {
-        const isCorrect = (userAnswers[index] == question.correctAnswer); // Check if userAnswers is defined
-        reviewHTML +=`<p>Question ${index + 1}: ${isCorrect ? 'Correct' : 'Wrong'}</p>`;
-    });
-    quizContainer.innerHTML = reviewHTML;
+function sortTasks() {
+    const sortBy = document.getElementById('sort').value;
+    if (sortBy === 'priority') {
+        tasks.sort((a, b) => a.priority.localeCompare(b.priority));
+    } else if (sortBy === 'dueDate') {
+        tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+    } else if (sortBy === 'completionStatus') {
+        tasks.sort((a, b) => a.completed - b.completed);
+    }
+    renderTasks();
 }
 
-function showFeedback(message, color) {
-    const feedbackElement = document.getElementById('feedback');
-    feedbackElement.innerText = message;
-    feedbackElement.style.color = color;
-}
-
-function startTimer() {
-    let timeLeft = 10;
-    timer = setInterval(() => {
-        document.getElementById('timer').innerText =`Time left: ${timeLeft} seconds`;
-        timeLeft--;
-         if(timeLeft >= 0){
-               document.getElementById('timer').innerText =`Time left: ${timeLeft} seconds`;
-          }
-          else {
-            clearInterval(timer);
-            showFeedback("Time's up!", "red");
+function renderTasks() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+    tasks.forEach((task, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${task.description} - Priority: ${task.priority} - Due Date: ${task.dueDate}`;
+        if (task.completed) {
+            listItem.classList.add('completed');
         }
-    }, 1000);
+        listItem.addEventListener('click', () => toggleCompletion(index)); // Toggle completion when clicked
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            editTask(index);
+        });      
+		const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            deleteTask(index);
+        });
+		listItem.appendChild(editButton);
+        listItem.appendChild(deleteButton);
+        taskList.appendChild(listItem);
+    });
 }
-
-function nextQuestion() {
-    currentQuestion++;
-    if (currentQuestion < quizData.length) {
-        showQuestion();
-        clearInterval(timer);
-        startTimer();
-    } else {
-        endQuiz();
-    }
-}
-
-
-startQuiz();
