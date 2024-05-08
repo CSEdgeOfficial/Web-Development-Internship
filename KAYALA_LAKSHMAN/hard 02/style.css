@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(21, 21, 21);
+    color: white;
+}
+
+h1{
+    align-self: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    
+} 
+
+div{
+    background-color: rgb(107, 106, 106);
+    height: 150px;
+    max-width: 600px;
+    border: 1px solid black;
+}
+button{
+    color: white;
+    background-color: rgb(37, 37, 37);
+    /* height: 100px; */
+    /* max-height: 50px; */
+    min-height: 150px;
+    min-width: 185px;
+}
+div:hover{
+     background-color: rgb(255, 0, 0);
+}
+
+@media screen and (max-width : 1090px){
+    
+    h1{
+        font-size: 50px;
+
+    }
+    .container{
+        min-width: 600px;
+        margin-top: 35%; 
+    }
+    div{
+        
+        max-width: 250px;
+    }
+    button{
+        text-align: center;
+        
+    }
+}
