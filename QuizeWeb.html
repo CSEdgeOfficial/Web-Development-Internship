@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Quiz</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #922f2f;
+    border: 1px solid #922f2e;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #976d6d;
+}
+
+#quizResult {
+    display: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interactive Quiz</h1>
+    <div class="question" id="question1">
+        <p>1. What is the result of 2 + 2?</p>
+        <ul class="options">
+            <li class="option"><input type="radio" name="q1" value="a"> a) 2</li>
+            <li class="option"><input type="radio" name="q1" value="b"> b) 4</li>
+            <li class="option"><input type="radio" name="q1" value="c"> c) 5</li>
+            <li class="option"><input type="radio" name="q1" value="d"> d) 6</li>
+        </ul>
+    </div>
+    <div class="question" id="question2">
+        <p>2. What is the Multiplication of 3 * 3?</p>
+        <ul class="options">
+            <li class="option"><input type="radio" name="q2" value="a"> a) 3</li>
+            <li class="option"><input type="radio" name="q2" value="b"> b) 9</li>
+            <li class="option"><input type="radio" name="q2" value="c"> c) 5</li>
+            <li class="option"><input type="radio" name="q2" value="d"> d) 6</li>
+        </ul>
+    </div>
+    <div class="question" id="question3">
+        <p>3. What is the capital of India?</p>
+        <ul class="options">
+            <li class="option"><input type="radio" name="q3" value="a"> a) Benglore</li>
+            <li class="option"><input type="radio" name="q3" value="b"> b) Delhi</li>
+            <li class="option"><input type="radio" name="q3" value="c"> c) Tirupati</li>
+            <li class="option"><input type="radio" name="q3" value="d"> d) Chennai</li>
+        </ul>
+    </div>
+    <div class="question" id="question4">
+        <p>4. What is the capital of Tamilnadu?</p>
+        <ul class="options">
+            <li class="option"><input type="radio" name="q4" value="a"> a) Benglore</li>
+            <li class="option"><input type="radio" name="q4" value="b"> b) Chennai</li>
+            <li class="option"><input type="radio" name="q4" value="c"> c) Tirupati</li>
+            <li class="option"><input type="radio" name="q4" value="d"> d) Delhi</li>
+        </ul>
+    </div>
+    <!-- Add more questions as needed -->
+    <button onclick="submitQuiz()">Submit Quiz</button>
+</div>
+
+<div id="quizResult" class="container">
+    <h2>Quiz Result</h2>
+    <div id="resultMessage"></div>
+    <button onclick="reviewQuiz()">Review Quiz</button>
+</div>
+
+<script>
+let timer;
+let totalTime = 10; // Total time for each question in seconds
+let currentQuestion = 1;
+let totalQuestions = document.querySelectorAll('.question').length;
+
+function startTimer() {
+    let timeLeft = totalTime;
+    document.getElementById('timer').innerText = timeLeft;
+    timer = setInterval(function() {
+        timeLeft--;
+        if (timeLeft >= 0) {
+            document.getElementById('timer').innerText = timeLeft;
+        } else {
+            clearInterval(timer);
+            document.getElementById(question${currentQuestion}).style.display = 'none';
+            document.getElementById('quizResult').style.display = 'block';
+            document.getElementById('resultMessage').innerHTML = Time's up!;
+        }
+    }, 1000);
+}
+
+function submitQuiz() {
+    clearInterval(timer);
+    document.getElementById(question${currentQuestion}).style.display = 'none';
+    document.getElementById('quizResult').style.display = 'block';
+    let correctAnswers = 0;
+    for (let i = 1; i <= totalQuestions; i++) {
+        let selectedOption = document.querySelector(input[name=q${i}]:checked);
+        if (selectedOption) {
+            if (currentQuestion === 1 && selectedOption.value === 'b') {
+                correctAnswers++;
+            }
+            if (currentQuestion === 2 && selectedOption.value === 'b') {
+                correctAnswers++;
+            }
+            if (currentQuestion === 3 && selectedOption.value === 'b') {
+                correctAnswers++;
+            }
+            if (currentQuestion === 4 && selectedOption.value === 'b') {
+                correctAnswers++;
+            }
+            // Add more conditions for additional questions
+        }
+    }
+    let resultMessage = You scored ${correctAnswers} out of ${totalQuestions};
+    document.getElementById('resultMessage').innerHTML = resultMessage;
+}
+
+function reviewQuiz() {
+    location.reload(); // Reload the page to allow users to review the quiz
+}
+
+window.onload = function() {
+    startTimer();
+};
+</script>
+
+</body>
+</html>

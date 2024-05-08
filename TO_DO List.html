@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+    .container { 
+    background-color: #d38686;
+    height: auto;
+    width: auto;
+    align-content: center;
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    margin-bottom: 10px;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.todo-item input[type="text"] {
+    width: 60%;
+}
+
+.todo-item .delete-btn {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.todo-item .edit-btn {
+    background-color: #0099ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+}
+
+.todo-item.completed input[type="text"] {
+    text-decoration: line-through;
+}
+
+.todo-item.completed input[type="checkbox"] {
+    text-decoration: line-through;
+}
+
+.todo-item.completed .edit-btn,
+.todo-item.completed .delete-btn {
+    display: none;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>To-Do List</h1>
+    <ul class="todo-list">
+        <li class="todo-item">
+            <input type="checkbox">
+            <input type="text" value="Task 1">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </li>
+        <li class="todo-item">
+            <input type="checkbox">
+            <input type="text" value="Task 2">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+        </li>
+    </ul>
+    <button id="addBtn">Add Task</button>
+</div>
+
+<script>
+document.getElementById('addBtn').addEventListener('click', function() {
+    var todoList = document.querySelector('.todo-list');
+    var newTodoItem = document.createElement('li');
+    newTodoItem.classList.add('todo-item');
+    newTodoItem.innerHTML = `
+        <input type="checkbox">
+        <input type="text" value="">
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+    `;
+    todoList.appendChild(newTodoItem);
+});
+
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('delete-btn')) {
+        event.target.parentElement.remove();
+    }
+    if (event.target.classList.contains('edit-btn')) {
+        var textInput = event.target.parentElement.querySelector('input[type="text"]');
+        textInput.disabled = !textInput.disabled;
+        if (!textInput.disabled) {
+            textInput.focus();
+        }
+    }
+    if (event.target.type === 'checkbox') {
+        event.target.parentElement.classList.toggle('completed');
+    }
+});
+</script>
+</body>
+</html>
