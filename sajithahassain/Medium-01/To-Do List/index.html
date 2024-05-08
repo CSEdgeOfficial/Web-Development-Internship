@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Quiz App</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="start-container" class="start-container">
-        <h1>Welcome to the Quiz!</h1>
-       
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add new task...">
+        <input type="date" id="dueDateInput"> <!-- Date input -->
+        <div class="priority">
+            <span>Priority:</span>
+            <label><input type="radio" name="priority" value="High"> High</label>
+            <label><input type="radio" name="priority" value="Medium"> Medium</label>
+            <label><input type="radio" name="priority" value="Low"> Low</label>
+        </div>
+        <button onclick="addTask()">Add Task</button>
+        <select id="sort" onchange="sortTasks()">
+            <option value="priority">Priority</option>
+            <option value="dueDate">Due Date</option>
+            <option value="completionStatus">Completion Status</option>
+        </select>
+        <ul id="taskList"></ul>
+		<br>
     </div>
-
-    <!-- Quiz container -->
-    <div id="quiz-container" class="quiz-container" >
-        <div id="question" class="question"></div>
-        <div id="choices" class="choices"></div>
-        <div id="feedback" class="feedback"></div>
-        <div id="timer" class="timer"></div>
-        <button type = "button" id="next-btn" class="next-btn" onclick="nextQuestion()">Next</button>
-    </div>
-
-    <!-- Result container -->
-    <div id="result-container" class="result-container" style="display: none;">
-        <h2>Quiz Complete!</h2>
-        <p>Your score: <span id="score"></span>/<span id="total-questions"></span></p>
-        <button onclick="reviewScores()">Review Scores</button>
-       
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
+   
