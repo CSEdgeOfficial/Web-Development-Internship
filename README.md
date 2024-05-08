@@ -124,11 +124,15 @@ Medium Level Tasks:
      - Timer for each question, scoring mechanism, and feedback for answers
      - Option for users to review their quiz results
 
-8. Advanced Calculator
-   - Enhance basic calculator functionality by incorporating:
-     - Unit converters, currency conversion, and real-time updates on stock prices or cryptocurrency rates
-     - Intuitive interface with responsive design for diverse user needs
-
+8. GitHub Profile Readme Generator
+   - The GitHub Profile Readme Generator is a tool aimed at simplifying the creation of visually appealing and informative README files for GitHub profiles. It provides users with templates and customization options to showcase their skills, projects, and personality effectively on their GitHub profiles.
+     - **Template Selection**: Choose from a variety of pre-designed templates tailored for different purposes, such as showcasing projects, skills, or personal interests.
+     - **Customization Options**: Customize the selected template with your own information, including profile picture, bio, social media links, project highlights, and more.
+     - **Markdown Support**: Utilize Markdown syntax to format text, add images, links, and other elements to your README.
+     - **Preview**: Preview the generated README file before committing changes to your GitHub profile.
+     - **Ease of Use**: User-friendly interface with intuitive controls for seamless navigation and editing.
+     - **Version Control Integration**: Easily update and maintain your GitHub profile README by integrating it with version control systems like Git.
+    
 <a id="hard-level"></a>
 
 Hard Level Tasks:
