@@ -158,5 +158,4 @@ function nextQuestion() {
         endQuiz();
     }
 }
-
 startQuiz();
