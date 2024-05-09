@@ -138,10 +138,11 @@ Medium Level Tasks:
 Hard Level Tasks:
 -----------------
 
-9. QR Code Generator
-   - Develop a web application for generating QR codes with options for:
-     - URL links, contact information, Wi-Fi network details, and text messages
-     - Customization of QR code size, color, and error correction level
+9. Resume Maker
+   - Create a comprehensive web application that assists users in building professional resumes:
+     - Templates for different career levels and industries
+     - Customizable sections for experience, education, skills, and certifications
+     - Export options for PDF and HTML formats
 
 10. Tic Tac Toe
     - Implement a classic Tic Tac Toe game with:
