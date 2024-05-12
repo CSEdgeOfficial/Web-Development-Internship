@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 2px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            font-size: 2em;
+            background-color: #eee;
+            transition: background-color 0.3s ease;
+        }
+
+        .cell:hover {
+            background-color: #ddd;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+
+    <div id="game-board">
+        <div class="cell" onclick="placeMarker(0, 0)"></div>
+        <div class="cell" onclick="placeMarker(0, 1)"></div>
+        <div class="cell" onclick="placeMarker(0, 2)"></div>
+        <div class="cell" onclick="placeMarker(1, 0)"></div>
+        <div class="cell" onclick="placeMarker(1, 1)"></div>
+        <div class="cell" onclick="placeMarker(1, 2)"></div>
+        <div class="cell" onclick="placeMarker(2, 0)"></div>
+        <div class="cell" onclick="placeMarker(2, 1)"></div>
+        <div class="cell" onclick="placeMarker(2, 2)"></div>
+    </div>
+
+    <button onclick="resetGame()">Reset Game</button>
+
+    <script>
+        let currentPlayer = 'X';
+        let cells = document.querySelectorAll('.cell');
+        let gameOver = false;
+
+        function placeMarker(row, col) {
+            if (!gameOver && !cells[row * 3 + col].textContent) {
+                cells[row * 3 + col].textContent = currentPlayer;
+                if (checkWin(row, col)) {
+                    alert(currentPlayer + ' wins!');
+                    gameOver = true;
+                } else if (checkDraw()) {
+                    alert('It\'s a draw!');
+                    gameOver = true;
+                } else {
+                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                }
+            }
+        }
+
+        function checkWin(row, col) {
+            return (checkRow(row) || checkCol(col) || checkDiagonals());
+        }
+
+        function checkRow(row) {
+            return (cells[row * 3].textContent === currentPlayer &&
+                    cells[row * 3 + 1].textContent === currentPlayer &&
+                    cells[row * 3 + 2].textContent === currentPlayer);
+        }
+
+        function checkCol(col) {
+            return (cells[col].textContent === currentPlayer &&
+                    cells[col + 3].textContent === currentPlayer &&
+                    cells[col + 6].textContent === currentPlayer);
+        }
+
+        function checkDiagonals() {
+            return ((cells[0].textContent === currentPlayer &&
+                     cells[4].textContent === currentPlayer &&
+                     cells[8].textContent === currentPlayer) ||
+                    (cells[2].textContent === currentPlayer &&
+                     cells[4].textContent === currentPlayer &&
+                     cells[6].textContent === currentPlayer));
+        }
+
+        function checkDraw() {
+            for (let cell of cells) {
+                if (!cell.textContent) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function resetGame() {
+            for (let cell of cells) {
+                cell.textContent = '';
+            }
+            currentPlayer = 'X';
+            gameOver = false;
+        }
+    </script>
+</body>
+</html>
