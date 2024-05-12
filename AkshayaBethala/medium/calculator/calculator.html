@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="row">
+            <div class="col clear"><input type="button" value="C" onclick="clearDisplay()"></div>
+            <div class="col operator"><input type="button" value="/" onclick="addToDisplay('/')"></div>
+        </div>
+        <div class="row">
+            <div class="col numeric"><input type="button" value="7" onclick="addToDisplay('7')"></div>
+            <div class="col numeric"><input type="button" value="8" onclick="addToDisplay('8')"></div>
+            <div class="col numeric"><input type="button" value="9" onclick="addToDisplay('9')"></div>
+            <div class="col operator"><input type="button" value="*" onclick="addToDisplay('*')"></div>
+        </div>
+        <div class="row">
+            <div class="col numeric"><input type="button" value="4" onclick="addToDisplay('4')"></div>
+            <div class="col numeric"><input type="button" value="5" onclick="addToDisplay('5')"></div>
+            <div class="col numeric"><input type="button" value="6" onclick="addToDisplay('6')"></div>
+            <div class="col operator"><input type="button" value="-" onclick="addToDisplay('-')"></div>
+        </div>
+        <div class="row">
+            <div class="col numeric"><input type="button" value="1" onclick="addToDisplay('1')"></div>
+            <div class="col numeric"><input type="button" value="2" onclick="addToDisplay('2')"></div>
+            <div class="col numeric"><input type="button" value="3" onclick="addToDisplay('3')"></div>
+            <div class="col operator"><input type="button" value="+" onclick="addToDisplay('+')"></div>
+        </div>
+        <div class="row">
+            <div class="col numeric"><input type="button" value="0" onclick="addToDisplay('0')"></div>
+            <div class="col numeric"><input type="button" value="." onclick="addToDisplay('.')"></div>
+            <div class="col equal"><input type="button" value="=" onclick="calculate()"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
