@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .option {
+            width: 48%;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #add8e6;
+        }
+
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .result h2 {
+            color: #007bff;
+        }
+
+        .timer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .timer span {
+            font-size: 24px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz</h1>
+        <div class="question" id="question">
+            <!-- Question will be dynamically filled here -->
+        </div>
+        <div class="options" id="options">
+            <!-- Options will be dynamically filled here -->
+        </div>
+        <div class="timer" id="timer">
+            Time Remaining: <span id="time">10</span> seconds
+        </div>
+        <div class="result" id="result">
+            <!-- Result will be shown here -->
+        </div>
+    </div>
+
+    <script>
+        // Quiz Data
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["Paris", "London", "Berlin", "Rome"],
+                answer: "Paris"
+            },
+            {
+                question: "What is 2 + 2?",
+                options: ["3", "4", "5", "6"],
+                answer: "4"
+            },
+            {
+                question: "Who wrote 'To Kill a Mockingbird'?",
+                options: ["Harper Lee", "Ernest Hemingway", "J.K. Rowling", "F. Scott Fitzgerald"],
+                answer: "Harper Lee"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let timeLeft = 10;
+        let timer;
+
+        function displayQuestion() {
+            const questionElement = document.getElementById("question");
+            const optionsElement = document.getElementById("options");
+
+            if (currentQuestion >= questions.length) {
+                endQuiz();
+                return;
+            }
+
+            questionElement.textContent = questions[currentQuestion].question;
+            optionsElement.innerHTML = "";
+
+            questions[currentQuestion].options.forEach(option => {
+                const optionElement = document.createElement("div");
+                optionElement.classList.add("option");
+                optionElement.textContent = option;
+                optionElement.addEventListener("click", () => checkAnswer(option));
+                optionsElement.appendChild(optionElement);
+            });
+
+            startTimer();
+        }
+
+        function checkAnswer(selectedOption) {
+            clearInterval(timer);
+
+            if (selectedOption === questions[currentQuestion].answer) {
+                score++;
+            }
+
+            currentQuestion++;
+            displayQuestion();
+        }
+
+        function startTimer() {
+            timeLeft = 10;
+            updateTimerDisplay();
+
+            timer = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateTimerDisplay();
+                } else {
+                    clearInterval(timer);
+                    currentQuestion++;
+                    displayQuestion();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            document.getElementById("time").textContent = timeLeft;
+        }
+
+        function endQuiz() {
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `<h2>Quiz Ended!</h2>
+                                        <p>Your score: ${score}/${questions.length}</p>`;
+
+            clearInterval(timer);
+        }
+
+        displayQuestion();
+    </script>
+</body>
+</html>
