@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add new task...">
+        <input type="date" id="dueDateInput"> <!-- Date input -->
+        <div class="priority">
+            <span>Priority:</span>
+            <label><input type="radio" name="priority" value="High"> High</label>
+            <label><input type="radio" name="priority" value="Medium"> Medium</label>
+            <label><input type="radio" name="priority" value="Low"> Low</label>
+        </div>
+        <button onclick="addTask()">Add Task</button>
+        <select id="sort" onchange="sortTasks()">
+            <option value="priority">Priority</option>
+            <option value="dueDate">Due Date</option>
+            <option value="completionStatus">Completion Status</option>
+        </select>
+        <ul id="taskList"></ul>
+		<br>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
