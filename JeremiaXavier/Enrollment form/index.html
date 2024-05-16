@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav-gradient fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Harmony Institute</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Enroll Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Harmony Institute</h1>
+                <p>Unlock your potential with quality education.</p>
+                <!-- Button to display enrollment form -->
+                <button class="btn btn-primary" onclick="toggleEnrollmentForm()">Enroll Now</button>
+            </div>
+            <div class="col-md-6">
+                <img src="./images/school-background.webp" alt="School Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Enrollment Form Section -->
+    <section class="form-section" id="enrollmentForm">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2 class="text-center mb-4">Student Enrollment Form</h2>
+                    <form id="enrollmentForm" onsubmit="return validateForm()">
+                        <!-- Student's Name -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" id="name" name="name" >
+                            
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email" id="email" name="email" >
+                            <span id="emailError" class="error-message"></span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name="phone">
+                            <span id="phoneError" class="error-message"></span>
+                        </div>
+
+                        <!-- Course Selection -->
+                        <div class="form-group">
+                            <select class="form-control" id="course" name="course">
+                                <option value="">Select Course</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Mathematics">Mathematics</option>
+                            </select>
+                        </div>
+
+                        <!-- Gender Selection -->
+                        <div class="form-group">
+                            <select class="form-control" id="gender" name="gender">
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="dob" name="dob" >
+                        </div>
+
+                        <!-- Address -->
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Address" id="address" name="address" rows="3" ></textarea>
+                        </div>
+
+                        <!-- Additional Comments -->
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Additional Comments" id="comments" name="comments" rows="4"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <span id="nameError" class="error-message"> </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 School Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+    function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var course = document.getElementById("course").value;
+    var gender = document.getElementById("gender").value;
+    var dob = document.getElementById("dob").value;
+    var address = document.getElementById("address").value;
+
+    // Regular expression for email validation
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Regular expression for phone number validation
+    var phonePattern = /^\d{10}$/;
+
+    // Validation flags
+    var isValid = true;
+    var errorMessage = "";
+
+    // Validate name
+    if (!name) {
+        isValid = false;
+        errorMessage += "Name is required.<br>";
+    }
+
+    // Validate email
+    if (!email.match(emailPattern)) {
+        isValid = false;
+        errorMessage += "Valid email is required.<br>";
+    }
+
+    // Validate phone number
+    if (!phone.match(phonePattern)) {
+        isValid = false;
+        errorMessage += "Valid phone number is required.<br>";
+    }
+
+    // Validate course selection
+    if (!course) {
+        isValid = false;
+        errorMessage += "Course selection is required.<br>";
+    }
+
+    // Validate gender selection
+    if (!gender) {
+        isValid = false;
+        errorMessage += "Gender selection is required.<br>";
+    }
+
+    // Validate date of birth
+    if (!dob) {
+        isValid = false;
+        errorMessage += "Date of Birth is required.<br>";
+    }
+
+    // Validate address
+    if (!address) {
+        isValid = false;
+        errorMessage += "Address is required.<br>";
+    }
+
+    // Display error message
+    document.getElementById("nameError").innerHTML = errorMessage;
+
+    // Return validity flag
+    return isValid;
+}
+
+    </script>
+    <script>
+    var enrollmentForm = document.getElementById("enrollmentForm");
+        enrollmentForm.style.display = enrollmentForm.style.display = "none";
+        function toggleEnrollmentForm() {
+            var enrollmentForm = document.getElementById("enrollmentForm");
+            enrollmentForm.style.display = enrollmentForm.style.display === "none" ? "block" : "none";
+        }
+    </script>
+    
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

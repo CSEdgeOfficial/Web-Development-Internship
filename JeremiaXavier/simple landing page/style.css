@@ -1,0 +1,266 @@
+
+        /* Custom CSS */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            font-family: 'Arial', sans-serif; /* Default font family */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .content{
+            display: none;
+        }
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader img {
+            width:50px;
+            height: auto;
+        }
+        .content {
+            display:;
+        }
+        .hero, .feature, .testimonial, .card {
+            border-radius: 15px; /* Rounded border */
+            overflow: hidden;
+        }
+        .hero {
+            position: relative;
+            background-color: #e9ebed; /* Background color */
+            background-size: cover;
+            background-position: center;
+            color: #060101; /* Text color */
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(244, 241, 241, 0.995); /* Semi-transparent overlay */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-weight: bold; /* Bold font weight */
+            font-size: 3rem; /* Larger font size */
+            line-height: 1.2; /* Increased line height */
+            font-family: 'Arial Black', sans-serif; /* Custom font family */
+            color: #222; /* Darker text color */
+        }
+        .feature {
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out; /* Animation effect */
+        }
+        .feature:hover {
+            transform: scale(1.05); /* Scale on hover */
+        }
+        .testimonial {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out; /* Animation effect */
+        }
+        .testimonial:hover {
+            transform: translateY(-10px); /* Move up on hover */
+        }
+        footer {
+            background-color: #343a40; /* Dark gray footer */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* About Section Styles */
+        #about {
+            padding: 100px 0;
+            background-color: #fff; /* White background */
+        }
+        #about h2 {
+            font-size: 2.5rem; /* Larger font size */
+            font-weight: bold; /* Bold font weight */
+            color: #060101; /* Darker text color */
+            margin-bottom: 30px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px); /* Initially translate down */
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        #about p {
+            font-size: 1.2rem; /* Larger font size */
+            font-weight: 500; /* Semi-bold font weight */
+            color: #444; /* Dark gray text color */
+            margin-bottom: 20px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(50px); /* Initially translate down */
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        #about .container {
+            max-width: 800px; /* Limit container width */
+        }
+        #about .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        #hero .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(0px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(50px);
+            }
+        }
+        .fadeInUp {
+            animation-name: fadeInUp;
+        }
+        .fadeInDown {
+            animation-name: fadeInDown;
+        }
+        /* Add your custom CSS styles */
+        .gtco-testimonials {
+    position: relative;
+    margin-top: 30px;
+  
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      color: #333333;
+      margin-bottom: 50px;
+    }
+  
+    .owl-stage-outer {
+      padding: 30px 0;
+    }
+  
+    .owl-nav {
+      display: none;
+    }
+  
+    .owl-dots {
+      text-align: center;
+  
+      span {
+        position: relative;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        display: block;
+        background: #fff;
+        border: 2px solid #01b0f8;
+        margin: 0 5px;
+      }
+  
+      .active {
+        box-shadow: none;
+  
+        span {
+          background: #01b0f8;
+          box-shadow: none;
+          height: 12px;
+          width: 12px;
+          margin-bottom: -1px;
+        }
+      }
+    }
+  
+    .card_1 {
+      background: #fff;
+      box-shadow: 0 8px 30px -7px #c9dff0;
+      margin: 0 20px;
+      padding: 0 10px;
+      border-radius: 20px;
+      border: 0;
+        
+      .card-img-top {
+        max-width: 100px;
+        border-radius: 50%;
+        margin: 15px auto 0;
+        box-shadow: 0 8px 20px -4px #95abbb;
+        width: 100px;
+        height: 100px;
+      }
+  
+      h5 {
+        color: #01b0f8;
+        font-size: 21px;
+        line-height: 1.3;
+  
+        span {
+          font-size: 18px;
+          color: #666666;
+        }
+      }
+  
+      p {
+        font-size: 18px;
+        color: #555;
+        padding-bottom: 15px;
+      }
+    }
+  
+    .active {
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+  
+    .center {
+      opacity: 1;
+  
+      h5 {
+        font-size: 24px;
+  
+        span {
+          font-size: 20px;
+        }
+      }
+  
+      .card-img-top {
+        max-width: 100%;
+        height: 120px;
+        width: 120px;
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .gtco-testimonials {
+      margin-top: 20px;
+    }
+  }
+  
+  .owl-carousel {
+    .owl-nav button {
+      &.owl-next, &.owl-prev {
+        outline: 0;
+      }
+    }
+  
+    button.owl-dot {
+      outline: 0;
+    }
+  }
