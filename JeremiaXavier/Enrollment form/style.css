@@ -1,0 +1,54 @@
+ /* Custom CSS styles */
+ body{
+    scrollbar-width: auto;
+}
+.error-message {
+    color: red;
+}
+.form-section {
+    padding: 50px 0;
+}
+.bg-nav-gradient {
+background: linear-gradient(90deg, #000033 0%, #000066 50%, #000033 100%);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section {
+background: linear-gradient(90deg, #000033 0%, #000066 50%, #000033 100%);
+color: white;
+padding: 100px 0;
+}
+
+body::-webkit-scrollbar {
+display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+/* Hide scrollbar for Firefox */
+
+
+.hero-section img {
+max-width: 100%;
+height: auto;
+}
+
+.btn{
+border-radius: 0%;
+width:40%;
+font-size: 17px;
+background-color: #007bff;
+margin-bottom: 20px;
+}
+
+footer {
+    background-color: #343a40; /* Dark gray footer */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+}
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+.social-icons a:hover {
+    color: #007bff;
+}

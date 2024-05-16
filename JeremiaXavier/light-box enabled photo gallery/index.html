@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox Photo Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mb-4">Photo Gallery</h2>
+    <div class="thumbnails">
+        <img src="images/ajeet-mestry-UBhpOIHnazM-unsplash.webp" alt="Image 1" class="thumbnail-img" data-full="images/ajeet-mestry-UBhpOIHnazM-unsplash.jpg">
+        <img src="images/ben-kolde-bs2Ba7t69mM-unsplash.webp" alt="Image 2" class="thumbnail-img" data-full="images/ben-kolde-bs2Ba7t69mM-unsplash.jpg">
+        <img src="images/carlos-muza-hpjSkU2UYSU-unsplash.webp" alt="Image 3" class="thumbnail-img" data-full="images/carlos-muza-hpjSkU2UYSU-unsplash.jpg">
+        <img src="images/diego-ph-fIq0tET6llw-unsplash.webp" alt="Image 4" class="thumbnail-img" data-full="images/diego-ph-fIq0tET6llw-unsplash.jpg">
+        <img src="images/florian-klauer-nptLmg6jqDo-unsplash.webp" alt="Image 5" class="thumbnail-img" data-full="images/florian-klauer-nptLmg6jqDo-unsplash.jpg">
+        <img src="images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.webp" alt="Image 6" class="thumbnail-img" data-full="images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg">
+        <img src="images/jk-sloan-co1wmDhPjKg-unsplash.webp" alt="Image 7" class="thumbnail-img" data-full="images/jk-sloan-co1wmDhPjKg-unsplash.jpg">
+        <img src="images/thought-catalog-9aOswReDKPo-unsplash.webp" alt="Image 9" class="thumbnail-img" data-full="images/thought-catalog-9aOswReDKPo-unsplash.jpg">
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" style="max-width: 450px;max-height:fit-content;">
+    <a class="prev ml-5" onclick="plusSlides(-1)" role="button">&#10094;</a>
+    <a class="next mr-5" onclick="plusSlides(1)" role="button">&#10095;</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="script.js">
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); /* Transparent background with 70% opacity */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+}
+.hero-section {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffc107;
+}
+.hero-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.hero-image {
+    max-width: 400px;
+    margin-top: 20px;
+}
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+.project p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+.project a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 10px;
+}
+.project a:hover {
+    color: #0056b3;
+}
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+.skills-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.skills-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+}
+.skills-list li {
+    text-align: left;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.skills-list h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.skills-list ul {
+    padding: 0;
+    margin: 0;
+}
+.skills-list ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

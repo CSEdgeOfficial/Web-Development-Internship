@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="hero-content">
+                    <h1>Jeremia Xavier</h1>
+                    <h2>Web Developer</h2>
+                    <p>Welcome to my portfolio website. I build awesome web experiences!</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="./images/pngwing.com.png" alt="Web Development Image" class="hero-image img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5" id="about">
+    <h1 class="text-center mb-4"><b>About Me</b></h1>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut quam non lectus venenatis bibendum. In eget lacinia libero. Curabitur pharetra consequat efficitur. Fusce eu neque ut elit tincidunt aliquam non nec ante. Integer eget sapien scelerisque, accumsan ex id, pharetra enim. Vestibulum vel est id est facilisis scelerisque eget sed urna. Donec quis pulvinar velit. Fusce bibendum vehicula ex, ut sodales velit vehicula id. Nullam tincidunt elit vel libero bibendum vulputate.</p>
+        </div>
+        <div class="col-md-6">
+            <p>Quisque lacinia elit eget tempus tincidunt. Nunc fringilla lacus ut diam convallis, eget ultrices leo convallis. Nulla pharetra, mauris eu tincidunt fermentum, elit arcu fermentum urna, id vestibulum lorem lorem at felis. Sed auctor elit vitae sapien euismod, vel facilisis justo ultricies. Nam nec fermentum quam. Sed at tortor fringilla, aliquet mauris id, volutpat magna. Nullam at lorem eget libero bibendum lacinia. Nullam convallis lectus id erat malesuada eleifend. Curabitur nec libero nec velit fermentum dignissim.</p>
+        </div>
+    </div>
+</div>
+<div class="container" id="projects">
+    <h1 class="text-center mb-4"><b>Projects</b></h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="project">
+                <h3>Simple Landing Page</h3>
+                <p>Description:This is a simple landing page for csEdge.</p>
+                <a href="#" class="text-center d-block view-project" data-title="csEdge landing page" data-media="video" data-src="./images/abcd.mp4">View Recording</a>
+                <a href="#" class="text-center d-block view-project" data-title="Project 1" data-media="image" data-src="./images/Screenshot (5).png,./images/Screenshot (6).png,./images/Screenshot (7).png">View Screenshots</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="project">
+                <h3>Sample Project 2</h3>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="text-center d-block view-project" data-title="Project 2" data-media="video" data-src="https://www.youtube.com/embed/VIDEO_ID_2">View Recording</a>
+                <a href="#" class="text-center d-block view-project" data-title="Project 2" data-media="image" data-src="./images/project2_screenshot1.png,./images/project2_screenshot2.png">View Screenshots</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="project">
+                <h3>Sample Project 3</h3>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="text-center d-block view-project" data-title="Project 3" data-media="video" data-src="https://www.youtube.com/embed/VIDEO_ID_3">View Project</a>
+                <a href="#" class="text-center d-block view-project" data-title="Project 3" data-media="image" data-src="./images/project3_screenshot1.png,./images/project3_screenshot2.png">View Screenshots</a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="project">
+                <h3>Sample Project 4</h3>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="text-center d-block view-project" data-title="Project 4" data-media="video" data-src="https://www.youtube.com/embed/VIDEO_ID_4">View Recording</a>
+                <a href="#" class="text-center d-block view-project" data-title="Project 4" data-media="image" data-src="./images/project4_screenshot1.png,./images/project4_screenshot2.png">View Screenshots</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="project">
+                <h3>Sample Project 5</h3>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="text-center d-block view-project" data-title="Project 5" data-media="video" data-src="https://www.youtube.com/embed/VIDEO_ID_5">View Recording</a>
+                <a href="#" class="text-center d-block view-project" data-title="Project 5" data-media="image" data-src="./images/project5_screenshot1.png,./images/project5_screenshot2.png">View Screenshots</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="skills-section" id="skills">
+    <div class="container">
+        <h1 class="text-center mb-4"><b>Skills</b></h1>
+        <div class="row">
+            <div class="col-md-4">
+                <li class="skills-list">
+                    <h3>Frontend Development</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Vue.js</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </li>
+            </div>
+            <div class="col-md-4">
+                <li class="skills-list">
+                    <h3>Backend Development</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                    </ul>
+                </li>
+            </div>
+            <div class="col-md-4">
+                <li class="skills-list">
+                    <h3>Other Skills</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>RESTful APIs</li>
+                        <li>Database Management (SQL, MongoDB)</li>
+                        <li>Responsive Design</li>
+                        <li>UI/UX Design Principles</li>
+                        <li>Agile Methodologies</li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <p>&copy;2024 Jeremia Xavier</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>
