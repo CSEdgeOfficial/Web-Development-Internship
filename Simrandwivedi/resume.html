@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div id="resume" class="resume">
+        <h2>Generated Resume</h2>
+        <div id="resume-content"></div>
+        <button onclick="printResume()" id="select">Print Resume</button>
+    </div>
+</div>
+<script>
+    function loadResume() {
+        const resumeData = JSON.parse(localStorage.getItem('resumeData'));
+        
+        if (resumeData) {
+            const resumeContent = `
+                <h3>${resumeData.name}</h3>
+                <p><strong>Email:</strong> ${resumeData.email}</p>
+                <p><strong>Phone:</strong> ${resumeData.phone}</p>
+                <h4>Summary</h4>
+                <p>${resumeData.summary}</p>
+                <h4>Experience</h4>
+                <p>${resumeData.experience}</p>
+                <h4>Education</h4>
+                <p>${resumeData.education}</p>
+            `;
+
+            document.getElementById('resume-content').innerHTML = resumeContent;
+        } else {
+            document.getElementById('resume-content').innerHTML = '<p>No resume data found.</p>';
+        }
+    }
+
+    function printResume() {
+        window.print();
+        
+    }
+
+    window.onload = loadResume;</script>
+</body>
+</html>
