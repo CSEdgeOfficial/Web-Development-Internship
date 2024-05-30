@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="start" class="start">
+        <h1>Welcome to the Quiz!</h1>
+        <button id="startBtn" class="start-btn">Start Quiz</button>
+    </div>
+    <div id="quiz" class="quiz" style="display: none;">
+        <div id="question" class="question"></div>
+        <div id="choices" class="choices"></div>
+        <div id="feedback" class="feedback"></div>
+        <div id="timer" class="timer"></div>
+        <button id="nextBtn" class="next">Next</button>
+    </div>
+    <div id="result" class="result" style="display: none;">
+        <h2>Quiz Completed</h2>
+        <p>Your Score: <span id="score"></span>/<span id="total"></span></p>
+        <button id="restartBtn">Restart Quiz</button>
+        <button id="reviewBtn">Review Scores</button>
+    </div>
+    <div id="review" class="review" style="display: none;">
+        <div id="reviewContent"></div>
+        <button id="backBtn">Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
