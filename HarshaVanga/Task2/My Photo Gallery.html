@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image Gallery </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="My Photo Gallery.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="main-heading"> IPL Gallery </h1>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892676/images_2_rikx97.jpg" alt="Image 1" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892661/thequint_2023-05_3e7deaeb-e046-4b1e-a7e8-48a7d76edd49_SPCS5657_1_vklhfe.webp')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892660/mumbai_1_ky7std.webp" alt="Image 2" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892669/Mumbai_Indians_IPL_2020_trophy_0_1200x768_1_cem8ib.jpg')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892667/ipl-2023-KKR-players-list_1_ryuebp.webp" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892665/f1698aj_kkr-bcci_625x300_27_May_24_1_ikwo18.webp')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892660/72902421_1_nt1esz.webp" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892669/main-qimg-959f6ffa0792cb8cd18290f957aceccb-lq_1_dwz8sy.jpg')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892675/This_is_the_logo_for_Rajasthan_Royals__a_cricket_team_playing_in_the_Indian_Premier_League__IPL_.svg_1_rfmeio.png" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892660/91871013_1_jmhnza.webp')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892663/106134004_1_ytsz1t.webp" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892667/gt-2022_1683207872520_1683207876621_1_jacqmw.webp')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892670/72902628_1_gngpxz.jpg" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892671/Delhi-Capitals-2024_1_ixb83x.webp')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892672/images_1_1_pfsaxn.jpg" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892675/Team_Final_Corrected_1_illtpw.jpg')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892673/Lucknow_Super_Giants_IPL_Logo.svg_1_ozldh4.webp" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892663/1685016797661_Lucknow-Super-Giants_1_x9czdl.webp')">
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+                <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716893310/Punjab-Kings-PBKS-Logo_1_iquuhi.jpg" alt="Image 3" class="img-thumbnail gallery-thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716892665/Au_1710758163_1_ivkv7m.jpg')">
+            </div>
+        </div>
+    </div>
+    <div id="lightboxModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="lightboxImage">
+    </div>
+
+    <script src="My Photo Gallery.js"></script>
+</body>
+
+</html>
