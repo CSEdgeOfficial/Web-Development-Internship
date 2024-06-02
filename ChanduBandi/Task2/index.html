@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligthbox-Enabled Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+body{
+    background: #222;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+.gallery a{
+    height: 200px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px #000;
+}
+.gallery a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery a img:hover{
+    transform: scale(1.4);
+}
+h1{
+    font-size: 50px;
+    margin-top: 10;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+    <h1>Lightbox Gallery</h1>
+    <div class="gallery">
+        <a href="https://img.freepik.com/free-photo/video-production-specialist-merging-raw-clips-footage-into-finished-news-segment-content-videographer-operating-computer-editing-systems-equipment-production-studio-dolly-out-shot_482257-73470.jpg?t=st=1716702895~exp=1716706495~hmac=fa0a8e17b3bce27d009098cab4948c88443cc972994a23ce35f14363f21ea5a8&w=1380"><img src="https://img.freepik.com/free-vector/men-women-visiting-museum-art-gallery-illustration_1262-18948.jpg?w=1380&t=st=1716702908~exp=1716703508~hmac=898a2d7515794be7a446e33611502da74fdd5c3483640707bdfa77f264dd8115" alt=""></a>
+
+        <a href="https://img.freepik.com/free-photo/dark-gray-wall-with-row-spotlights-empty-room_53876-74618.jpg?t=st=1716702916~exp=1716706516~hmac=946d3a46169cc1b18d5305210ff0f4d1e2ff661af53890bad08b866397bbcd7f&w=1060"><img src="https://img.freepik.com/free-photo/arrangement-different-frames-wall_23-2148814664.jpg?t=st=1716702918~exp=1716706518~hmac=1a8dd1df241b64a05ed2c6eae65d17f97737736d95845a0439f2f7f10d4eb86b&w=1060" alt=""></a>
+
+        <a href="https://img.freepik.com/free-photo/woman-art-exhibition_53876-14379.jpg?t=st=1716704071~exp=1716707671~hmac=3894364198199fd3097c2dc3dbfc689b60eecb52faaff2374e64ea81c212549b&w=996"><img src="https://img.freepik.com/free-photo/people-enjoying-art-exhibition_53876-139909.jpg?t=st=1716704074~exp=1716707674~hmac=b8774d802202f362d68f321a745e9658b236b7af2e189dbdd820fa36fe4ae891&w=996" alt=""></a>
+
+        <a href="https://img.freepik.com/free-vector/watercolor-photo-collage-design_52683-82542.jpg?w=996&t=st=1716703171~exp=1716703771~hmac=14cf52e7bed66049022a85962c7f737a00ca8eff07e946e6992dab30deb2a477"><img src="https://img.freepik.com/free-photo/hand-holding-coffee-cup-with-may-photograph-table_53876-16136.jpg?t=st=1716703169~exp=1716706769~hmac=5add154d9b1c7aa337225099e17320af1aa2f6a48cabbd9feb48bb6169759203&w=996" alt=""></a>
+
+        <a href="https://img.freepik.com/free-vector/empty-floral-frame-design-vector_53876-62654.jpg?w=740&t=st=1716703267~exp=1716703867~hmac=02588a4e6391f558b6b99cd8dba8a8411e5f32272a60d0363c099630a7b98bf1"><img src="https://img.freepik.com/free-vector/wall-with-shelf-light-lamp-product-display_107791-25059.jpg?w=1380&t=st=1716703271~exp=1716703871~hmac=a0dd259d412d4b59043e0887fbda3b64bd4493772f3b4b0064d88ca749055c39" alt=""></a>
+
+        <a href="https://img.freepik.com/free-vector/3d-white-niche-shelf-box-showcase-frame-with-light-vector-background-museum-interior-with-exhibit-hole-perspective-view-projector-spotlight-inside-compartment-gallery-exposition-stand-design_107791-21920.jpg?w=1380&t=st=1716703328~exp=1716703928~hmac=297bb00fca7796953b14daf1f876acb8a9d0c08186d07b3162b921cb6f192ce1"><img src="https://img.freepik.com/free-vector/futuristic-white-interior-with-rectangular-columns_107791-17442.jpg?w=1380&t=st=1716703326~exp=1716703926~hmac=664ca9f1a77ac50dc4ba8deb7e0e0e671b35aeb303ae3f67512b1c04842d77e3" alt=""></a>
+
+        <a href="https://img.freepik.com/free-photo/suitcase-is-table-with-suitcase-it-suitcase-floor_24640-87700.jpg?t=st=1716703410~exp=1716707010~hmac=d51282c36465c8413f46df915a0f04ead7c8df688308d3e9e14460a82fb2252c&w=1060"><img src="https://img.freepik.com/free-vector/photo-frame-collage-concept_23-2147865792.jpg?w=740&t=st=1716703416~exp=1716704016~hmac=51461f8745c3a6d3366afa4dbe517b1380131100c25981153ccf37225747f564" alt=""></a>
+
+        <a href="https://img.freepik.com/free-vector/blank-movie-posters-template-white-picture-frames_107791-2574.jpg?w=1380&t=st=1716703517~exp=1716704117~hmac=1f566ee20a6f7a042b122b323be2f6f376583539e248e7df8a6af73e4778eff6"><img src="https://img.freepik.com/free-photo/camera-capture-photograph-media-light_53876-16413.jpg?t=st=1716703516~exp=1716707116~hmac=17d6e308f6a0425dddcd82a5fc6b52a02f011fb4077d33b97080bf984f158099&w=996" alt=""></a>
+
+        <a href="https://img.freepik.com/free-vector/landing-page-template-design-business-websides_52683-22971.jpg?w=740&t=st=1716703616~exp=1716704216~hmac=197029e8d39758c87fff61d046407a9860b804010c1460c4cc900c84986e37f1"><img src="https://img.freepik.com/free-vector/images-concept-illustration_114360-218.jpg?w=740&t=st=1716703619~exp=1716704219~hmac=5ee568bb1d4229322ad7673bbd644b1aba574b799b7b2cdd0856d6fcb8578c60" alt=""></a>
+
+        <a href="https://img.freepik.com/free-vector/modern-photo-collage-frame-background-collect-lovely-photographs_1017-49660.jpg?w=1060&t=st=1716703715~exp=1716704315~hmac=9fe04ec582e6e376c7bf1ec78190daa2b9c384f12b43b37a0995234624139b8f"><img src="https://img.freepik.com/free-vector/travel-photo-background_1284-12695.jpg?w=740&t=st=1716703710~exp=1716704310~hmac=d74188867c67feb98e53bceb513411fe91e424b6fa676f609f44741144abbe60" alt=""></a>
+
+        <a href="https://img.freepik.com/free-photo/luxury-hotel-reception-hall-lounge-restaurant-with-high-ceiling_105762-1771.jpg?t=st=1716703820~exp=1716707420~hmac=e92790f0059bab53bd00f28ae0255056bd75ffeb32f75b57ec65857cfcf54966&w=996"><img src="https://img.freepik.com/free-photo/blue-wall-with-red-sofa_1286-149.jpg?t=st=1716703809~exp=1716707409~hmac=9980eb6f2d9537bb0356857e1478c9025ed8deede84f413da9d2fb08e08d6c8b&w=1060" alt=""></a>
+        
+        <a href="https://img.freepik.com/free-photo/dark-tunnel-with-turned-lamps-ceiling_181624-9703.jpg?t=st=1716703724~exp=1716707324~hmac=6d0730573f8c32adb3b2e3d569d239655ec85654d9b37792a43e2f0a476618ee&w=996"><img src="https://img.freepik.com/free-photo/detailed-shot-car-wheels-tires_157027-4266.jpg?t=st=1716704525~exp=1716708125~hmac=04f1ac432ce27a36760699db4a15fa4ce0aed125e98d8e2c888218ade03e2357&w=1380" alt=""></a>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script>
+        lightGallery(document.querySelector('.gallery'));
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
