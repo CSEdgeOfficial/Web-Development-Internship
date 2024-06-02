@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Tic Tac Toe</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="heading">Tic Tac Toe</h1>
+            <div class="game">
+                <div class="cells">
+                    <div class="cell one"></div>
+                    <div class="cell two"></div>
+                    <div class="cell three"></div>
+                </div>
+                <div class="cells">
+                    <div class="cell four"></div>
+                    <div class="cell five"></div>
+                    <div class="cell six"></div>
+                </div>
+                <div class="cells">
+                    <div class="cell seven"></div>
+                    <div class="cell eight"></div>
+                    <div class="cell nine"></div>
+                </div>
+                <div class="score">
+                    <h1>Score</h1>
+                    <div class="score-inner">
+                        <h2>X : <span id="playerXScore">0</span></h2>
+                        <h2>O : <span id="playerOScore">0</span></h2>
+                    </div>
+                    <div class="score-inner">
+                        <h2>Draws</h2>
+                        <h2 id="draws">0</h2>
+                    </div>
+                </div>
+                <button class="resetBtn">Reset</button>
+                <div class="toast">text</div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
