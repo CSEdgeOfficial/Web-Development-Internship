@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.calculator input[type="button"] {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator input[type="text"] {
+    width: calc(100% - 10px);
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.calculator .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator .row .col {
+    width: 25%;
+}
+
+.calculator .row .col.clear {
+    width: 50%;
+}
+
+.calculator .row .col.clear input[type="button"] {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.calculator .row .col.operator input[type="button"] {
+    background-color: #008080;
+    color: #fff;
+}
+
+.calculator .row .col.equal input[type="button"] {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.calculator .row .col.numeric input[type="button"] {
+    background-color: #f0f8ff;
+    color: #000;
+}
