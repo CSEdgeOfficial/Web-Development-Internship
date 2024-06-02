@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>QR Code Generator</title>
+    </head>
+    <body>
+       <div class="container">
+          <h1 class="head"><i class="fa-solid fa-qrcode"></i> QR Code Generator</h1>
+          <div class="left">
+            <form action="#">
+                <div class="text">
+                    <label for="text">
+                        <i class="fa-solid fa-keyboard"></i>
+                        Enter your text or URL
+                    </label>
+                    <input type="text" id="text" placeholder="enter your text or url" value="Hello World"/>
+                </div>
+                <div class="color">
+                    <label>
+                        <i class="fa-solid fa-paintbrush"></i>
+                        Color
+                    </label>
+                    <div class="colors-wrapper">
+                        <div class="foreground">
+                            <h5 class="heading">foreground</h5>
+                            <div class="custom-picker">
+                                <span></span>
+                                <input type="text" value="#18b485" disabled="" />
+                                <input type="color" class="color-picker" id="fg-color" value="#18b485" />
+                            </div>
+                        </div>
+                        <div class="background">
+                            <h5 class="heading">background</h5>
+                            <div class="custom-picker">
+                                <span></span>
+                                <input type="text" value="#130906" disabled="" />
+                                <input type="color" class="color-picker" id="bg-color" value="#130906" />
+                            </div>
+                        </div>
+                        <div class="corner">
+                            <h5 class="heading">corner</h5>
+                            <div class="custom-picker">
+                                <span></span>
+                                <input type="text" value="#e65cd3" disabled="" />
+                                <input type="color" class="color-picker" id="corner-color" value="#e65cd3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="type">
+                    <label>
+                        <i class="fa-solid fa-qrcode"></i>
+                        Error Correction Level
+                    </label> 
+                    <div class="type-wrapper">
+                        <div class="dots">
+                            <span class="heading">Select Level</span>
+                            <div class="custom-dropdown">
+                                <span class="selected" id="error">Q</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="options">
+                                    <span class="option">L</span>
+                                    <span class="option active">Q</span>
+                                    <span class="option">M</span>
+                                    <span class="option">H</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="size">
+                    <label>
+                        <i class="fa-solid fa-expand"></i>
+                        Size
+                    </label>
+                    <div class="custom-slider">
+                        <p class="left-text">Low</p>
+                        <div class="slider">
+                            <span>500 X 500</span>
+                            <input type="range" min="100" max="2000" value="500" id="size" />
+                        </div>
+                        <p class="right-text">High</p>
+                    </div>
+                </div>
+            </form>
+          </div>
+          <div class="right">
+            <button class="generate-btn" onclick="Generate()">Generate QR Code</button>
+            <div class="qr-code">
+                <div id="canvas"></div>
+                <script type="text/javascript">
+                    let qrCode;
+                    function Generate(){
+                        document.getElementById("canvas").innerHTML="";
+                        generate();
+                    }
+                    function generate() {
+                        const width = document.querySelector("#size").value;
+                        const data = document.querySelector("#text").value;
+                        const height = document.querySelector("#size").value;
+                        const foregroundColor = document.querySelector("#fg-color").value;
+                        const backgroundColor = document.querySelector("#bg-color").value;
+                        const cornerColor = document.querySelector("#corner-color").value;
+                        const errorCorrectionLevel = document.querySelector("#error");
+                        qrCode = new QRCodeStyling({
+                            width: width,
+                            height: width,
+                            type: "svg",
+                            data: data,
+                            qrOptions: {
+                                errorCorrectionLevel: errorCorrectionLevel.innerHTML,
+                            },
+                            dotsOptions: {
+                                color: foregroundColor,
+                                type: "rounded"
+                            },
+                            backgroundOptions: {
+                                color: backgroundColor,
+                            },
+                            cornersSquareOptions: {
+                                color: cornerColor,
+                            },
+                            imageOptions: {
+                                crossOrigin: "anonymous",
+                                margin: 20
+                            }
+                        });
+                        qrCode.append(document.getElementById("canvas"));
+                        const download = document.getElementById("download-png");
+                        download.addEventListener("click", () => {
+                            qrCode.download({
+                            name: "PSSYQRCode" + Date.now(),
+                            extension: "png",
+                            });
+                        });
+                    }
+                </script>
+            </div>
+            <div class="download">
+                <p>Download</p>
+                <div class="download-btns">
+                    <button class="download-btn" id="download-png">png <i class="fa-solid fa-download"></i></button>
+                </div>
+            </div>
+          </div>
+       </div>
+       <script src="script.js"></script>
+    </body>
+</html>
