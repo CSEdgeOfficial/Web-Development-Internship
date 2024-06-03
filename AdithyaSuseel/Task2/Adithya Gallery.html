@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2(2).css">
+</head>
+
+<body>
+    <div class="bg-container pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1> My Gallery </h1>
+                </div>
+                <div class="col-12">
+                    <div class="gallery">
+                        <img src="https://res.cloudinary.com/drjf67huv/image/upload/v1716562327/ancient-pagoda-indian-spirituality-buddhist-elegance-generated-by-ai_odgjwe.jpg" alt="Image 1" class="thumbnail" onclick="openModal('https://res.cloudinary.com/drjf67huv/image/upload/v1716562327/ancient-pagoda-indian-spirituality-buddhist-elegance-generated-by-ai_odgjwe.jpg')">
+                        <img src="https://res.cloudinary.com/drjf67huv/image/upload/v1716562326/ancient-ruins-angkor-legendary-khmer-civilization-generated-by-ai_hm1jfg.jpg" alt="Image 2" class="thumbnail " onclick="openModal('https://res.cloudinary.com/drjf67huv/image/upload/v1716562326/ancient-ruins-angkor-legendary-khmer-civilization-generated-by-ai_hm1jfg.jpg')">
+                        <img src="https://res.cloudinary.com/drjf67huv/image/upload/v1716562325/ancient-sandstone-tomb-ruins-showcase-east-asian-culture-generated-by-ai_c02xfm.jpg" alt="Image 3" class="thumbnail " onclick="openModal('https://res.cloudinary.com/drjf67huv/image/upload/v1716562325/ancient-sandstone-tomb-ruins-showcase-east-asian-culture-generated-by-ai_c02xfm.jpg')">
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="gallery">
+                        <img src="https://res.cloudinary.com/drjf67huv/image/upload/v1716562325/beautiful-mountains-landscape_bquaun.jpg" alt="Image 1" class="thumbnail" onclick="openModal('https://res.cloudinary.com/drjf67huv/image/upload/v1716562325/beautiful-mountains-landscape_bquaun.jpg')">
+                        <img src="https://res.cloudinary.com/drjf67huv/image/upload/v1716562312/cld-sample-2.jpg" alt="Image 2" class="thumbnail images" onclick="openModal('https://res.cloudinary.com/drjf67huv/image/upload/v1716562312/cld-sample-2.jpg')">
+                        <img src="https://res.cloudinary.com/drjf67huv/image/upload/v1716648856/2151297163_plvfmv.jpg" alt="Image 3" class="thumbnail " onclick="openModal('https://res.cloudinary.com/drjf67huv/image/upload/v1716648856/2151297163_plvfmv.jpg')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script2(2).js"></script>
+</body>
+
+</html>
