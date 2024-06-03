@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Student Enrollment Form</h2>
+        <form id="enrollmentForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div id="nameError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <div id="phoneError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="course"> Course Selection: </label>
+                <select id="course" name="course" required>
+                    <option value="">Select a Course</option>
+                    <option value="Mathematics"> Front-End </option>
+                    <option value="Science"> Back-End </option>
+                    <option value="Literature"> FullStack </option>
+                    <option value="Literature"> AI/ML </option>
+                </select>
+                <div id="courseError" class="error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
