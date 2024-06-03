@@ -1,0 +1,96 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+
+}
+
+header {
+background: #f7f7f7;
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: red;
+}
+
+nav a {
+margin-right: 15px;
+text-decoration: none;
+color: #333;
+}
+nav a:hover{
+	color: skyblue;
+}
+
+.hero {
+background-image: url("https://b.zmtcdn.com/data/pictures/chains/3/307893/2738bd3dfa84f54d62587a1f5af1c8fe_o2_featured_v2.jpg");
+background-size: cover;
+background-position: center;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: beige;
+
+}
+
+.features {
+display: flex;
+justify-content: space-around;
+background: rgb(75, 90, 100, 1.0);
+padding: 20px 0;
+color: beige;
+}
+
+.feature {
+padding: 20px;
+}
+
+.testimonials {
+display: flex;
+justify-content: space-around;
+color: white;
+background-color: red;
+
+}
+
+.contact {
+background: #f7f7f7;
+padding: 50px 20px;
+text-align: center;
+}
+
+.contact form {
+margin-bottom: 20px;
+}
+
+input,
+textarea {
+width: 100%;
+margin-bottom: 10px;
+padding: 10px;
+}
+
+button {
+padding: 10px 20px;
+background: #333;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+.social-media {
+margin-top: 20px;
+}
+
+.social-media a {
+margin-right: 10px;
+text-decoration: none;
+color: #333;
+background-color:violet;
+}
