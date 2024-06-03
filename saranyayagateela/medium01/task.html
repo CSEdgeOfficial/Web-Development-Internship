@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\style.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskinput" placeholder="Add a new task">
+        <input type="date" id="duedateinput" style="border-radius: 5px;width: 150px;height: 30px;">
+        <br>
+        <div class="priority">
+            <span>Priority:</span>
+            <label><input type="radio" name="priority" value="high"> high</label>
+            <label><input type="radio" name="priority" value="medium"> medium</label>
+            <label><input type="radio" name="priority" value="low"> low</label>
+        </div>
+        <br>
+        <button onclick="addtask()">Add Task</button>
+        <ul id="tasklist"></ul>
+        <br>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
