@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Maker</h1>
+        <form id="resume-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+            
+            <label for="summary">Summary:</label>
+            <textarea id="summary" rows="5" required></textarea>
+
+            <label for="education">Education:</label>
+            <textarea id="education" rows="5" required></textarea>
+            
+            <label for="experience">Experience:</label>
+            <textarea id="experience" rows="5" required></textarea>
+            
+            <button type="button" onclick="getResume()">Generate Resume</button>
+        </form>
+        
+        
+    </div>
+    <script src="resume.js"></script>
+</body>
+</html>
