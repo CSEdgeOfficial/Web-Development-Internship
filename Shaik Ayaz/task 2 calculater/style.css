@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+   background-color:black;
+   color:white;
+
+}
+
+.Container {
+    border: 2px solid white;
+    margin: 20px 15px;
+    padding: 10px;
+    background-color:gray;
+    border-radius:10px;
+}
+
+#text-val {
+    height: 60px;
+    width: 240px;
+    font-size: 20px;
+    padding-right: 10px;
+    border-radius:10px;
+    background-color:powderblue;
+    border: 2px solid black;
+}
+
+.input {
+    display: flex;
+    flex-direction:row;
+    margin: 0px 0px 5px 0px;
+
+}
+
+.clear {
+
+    font-size: 15px;
+    margin: 0px 0px 0px 5px;
+    color: black;
+    padding:8px;
+    cursor: pointer;
+    border-radius:10px;
+    background-color:gary;
+    border: 2px solid black;
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn button {
+    text-align: center;
+    margin: 1px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    color:red;
+    font-size:28px;
+    border-radius:10px;
+    border: 1px solid black;
+}
+
+.btn button:hover {
+    color: black;
+    background-color: red;
+}
+
+.clear:hover {
+    color: white;
+    background-color: black;
+}
