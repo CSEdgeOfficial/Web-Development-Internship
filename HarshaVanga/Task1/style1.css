@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.CSEdge-logo {
+    height: 70px;
+    width: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .nav a {
+    color: #fff;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header .nav a:hover {
+    color: #f4f4f4;
+}
+
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    animation: fadeInDown 1s ease-out 0.5s;
+}
+
+.hero .cta {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    animation: fadeInDown 1s ease-out 1s;
+}
+
+.hero .cta:hover {
+    background: #555;
+}
+
+.features,
+.testimonials,
+.contact {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features h2,
+.testimonials h2,
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.features .feature,
+.testimonials .testimonial {
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.features .feature h3,
+.testimonials .testimonial h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 0.75rem;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contact form button:hover {
+    background: #fcf8f8;
+}
+
+.contact .social {
+    margin-top: 10px;
+}
+
+.contact .social a {
+    margin: 0 0.5rem;
+    color: #f4f0f0;
+    font-size: 40px;
+    transition: color 0.3s;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #d32e2e;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(198, 9, 9, 0.1);
+}
+
+.contact .social a:hover {
+    color: #ffffff;
+    background: #e62525;
+}
+
+.contact-icons {
+    margin-left: 45%;
+    margin-right: 45%;
+    padding-top: 5%;
+    padding: auto;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}

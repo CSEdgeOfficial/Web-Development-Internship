@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Student Enrollment Form</title>
+    <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <h1>Student Enrollment Form</h1>
+    <form id="enhancedEnrollmentForm">
+        <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Student's Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="nameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+            <label for="phone"><i class="fas fa-phone"></i> Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <div class="error" id="phoneError"></div>
+        </div>
+        <div class="form-group">
+            <label for="course"><i class="fas fa-book"></i> Course Selection:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="math"> Web Development </option>
+                <option value="science"> Python </option>
+                <option value="history"> UI/UX Design </option>
+                <option value="literature"> 4.0 Technologies </option>
+            </select>
+            <div class="error" id="courseError"></div>
+        </div>
+        <div class="form-group">
+            <label for="comments"><i class="fas fa-comments"></i> Comments(if any): </label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+    </form>
+
+    <script src="student.js"></script>
+</body>
+
+</html>
