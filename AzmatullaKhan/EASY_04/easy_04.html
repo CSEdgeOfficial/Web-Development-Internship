@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./easy_04.css">
+    <title>Student Enrollment</title>
+</head>
+<body>
+    <div class="main-container" id="main_container">
+        <button class="main-container-button" onclick="Clicked()">Get Enrolled</button>
+    </div>
+    <div class="enrollment-container-hidden" id="enrollment_container">
+        <form id="enrollmentForm" onsubmit="return checkDetails()">
+            <div class="enrollment-div">
+                <h1>Student Enrollment</h1>
+                <label for="name" class="enrollment-div-label">Name* <span class="span-hidden" id="span_name">name should only contain alphabets</span></label>
+                <input type="text" class="enrollment-div-input" id="name" placeholder="Enter your registered name" required><br><br>
+                <label for="name" class="enrollment-div-label">Email*</label>
+                <input type="email" class="enrollment-div-input" id="email" placeholder="Enter your email" required><br><br>
+                <label for="number" class="enrollment-div-label">Mobile Number* <span class="span-hidden" id="span_number">Number must contain only 0-9 digits</span></label>
+                <input type="text" class="enrollment-div-input" id="number" placeholder="Enter your registered mobile number" required minlength="10" maxlength="10"><br><br>
+                <label for="courses" class="enrollment-div-label">Select Your Course*</label>
+                <select name="select-course" id="courses" class="enrollment-div-select" required>
+                    <option value="">Select the Course</option>
+                    <option value="Course 1">Course 1</option>
+                    <option value="Course 2">Course 2</option>
+                    <option value="Course 3">Course 3</option>
+                    <option value="Course 4">Course 4</option>
+                    <option value="Course 5">Course 5</option>
+                    <option value="Course 6">Course 6</option>
+                    <option value="Course 7">Course 7</option>
+                    <option value="Course 8">Course 8</option>
+                    <option value="Course 9">Course 9</option>
+                    <option value="Course 10">Course 10</option>
+                </select><br><br>
+                <label for="additional_comments" class="enrollment-div-label">Additional Comments</label>
+                <textarea name="additionalcomments" id="additional_comments" cols="0" rows="0"></textarea><br><br>
+                <button type="submit" class="enrollment-div-button">Enroll</button>
+            </div>
+        </form>
+    </div>
+    <script src="./easy_04.js"></script>
+</body>
+</html>
