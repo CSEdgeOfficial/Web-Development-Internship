@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbox Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-heading">LightBox Gallery</h1>
+        <div class="row">
+            <div class="column">
+                <img src=" https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064041/Tirupati-Temple_rk2lnb.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow box-shadow">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064040/Ramanathaswamy-Temple_puqq5u.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow box-shadow">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064040/Badrinath-Temple-Uttarakhand_j5gtbe.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow box-shadow">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064041/Kedarnath-Temple_vngjm0.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow box-shadow">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="  https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068558/Akshardham-Temple-Delhi_rmjrqs.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow box-shadow">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068559/Dwarkadhish-Temple_sbnuol.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow box-shadow">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068559/Sri-Padmanabhaswamy-Temple-Kerala_kr4h57.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow box-shadow">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="  https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068559/Virupaksha-Temple_j5v63k.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow box-shadow">
+
+            </div>
+        </div>
+    </div>
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 8</div>
+                <img src="  https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064041/Tirupati-Temple_rk2lnb.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 8</div>
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064040/Ramanathaswamy-Temple_puqq5u.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 8</div>
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064040/Badrinath-Temple-Uttarakhand_j5gtbe.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 8</div>
+                <img src=" https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717064041/Kedarnath-Temple_vngjm0.jpg " style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 8</div>
+                <img src="  https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068558/Akshardham-Temple-Delhi_rmjrqs.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 8</div>
+                <img src="https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068559/Dwarkadhish-Temple_sbnuol.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">7 / 8</div>
+                <img src="  https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068559/Sri-Padmanabhaswamy-Temple-Kerala_kr4h57.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">8 / 8</div>
+                <img src="  https://res.cloudinary.com/dd7vjsa0q/image/upload/v1717068559/Virupaksha-Temple_j5v63k.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
