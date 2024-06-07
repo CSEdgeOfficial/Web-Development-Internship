@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy_01</title>
+</head>
+<style>
+    *{
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+    scroll-behavior: smooth;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: #000;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+}
+.main-background{
+    min-height:3530px;
+    min-width:1492px;
+    background-color: #fffbfb;
+    box-sizing: border-box;
+}
+header{
+    height:70px;
+    width:100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding:12px 30px;
+    background-color: #e8e9e7;
+    /* backdrop-filter: blur(40px); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top:0;
+    z-index: 2;
+    /* border: 1px solid; */
+}
+.header-logo{
+    height:46px;
+    width:46px;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+}   
+nav{
+    height:46px;
+    width:600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+}
+.nav-items{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px;
+    height:36px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0px 18px;
+    border: 1px solid;
+    transition: all 0.2s ease-out;
+}
+.nav-items:hover{
+    color: #fff;
+    background-color: #363434;
+}
+hr{
+    position: sticky;
+    top:80px;
+    z-index: 2;
+}
+
+
+.hero-section{
+    position: absolute;
+    top:70px;
+    height:870px;
+    width:1492px;
+    box-sizing: border-box;
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero-section-title{
+    font-size: 52px;
+    position: relative;
+    top:40px;
+    left:180px;
+    font-weight: bolder;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom:12px;
+    text-decoration: underline;
+}
+.hero-section-description{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom:4px;
+    position: relative;
+    top:40px;
+    left:300px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.feature-section{
+    position: absolute;
+    top:950px;
+    height:850px;
+    width:1490px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0;
+    padding: 0px 50px
+}
+.feature-section-head{
+    font-size: 42px;
+    margin:0px;
+    text-decoration: underline;
+}
+.feature-section-desc{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+}
+.feature-section-item{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px;
+    height:36px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0px 18px;
+    border: 1px solid;
+    border-radius: 12px;
+    transition: all 0.2s ease-out;
+}
+.feature-section-item:hover{
+    color: #fff;
+    background-color: #363434;
+}
+
+
+.testimonial-section{
+    position: absolute;
+    top:1810px;
+    height:850px;
+    width:1490px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0;
+    /* border: 1px solid; */
+}
+.testimonial-section-head{
+    font-size: 42px;
+    margin:70px 0px 12px 0px;
+    text-decoration: underline;
+}
+.testimonial-container{
+    height:700px;
+    width:800px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 22px;
+    border:1.5px solid
+}
+.testimonial-desc{
+    font-size: 18px;
+    line-height:26px;
+    font-style: italic;
+    color: #000;
+}
+.testimonial-name{
+    font-size: 18px;
+    line-height: 22px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+.contact-section{
+    position: absolute;
+    top:2680px;
+    height:850px;
+    width:1490px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0;
+}
+.contact-section-head{
+    font-size: 36px;
+    margin: 0;
+    text-decoration: underline;   
+}
+.contact-section-desc{
+    position: relative;
+    left:140px;
+    font-size: 18px;
+    line-height:26px;
+    font-style: italic;
+    font-weight: 600;
+    margin: 0;
+}
+.conatct-conatiner{
+    margin-top: 12px;
+    height:600px;
+    width:450px;
+    border-radius: 12px;
+    border: 1px solid;
+    box-sizing: border-box;
+    padding:40px 20px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+}
+.contact-section-label{
+    font-size: 20px;
+    line-height:26px;
+    font-weight: 600;
+    font-style:italic;
+}
+.contact-section-input{
+    height:30px;
+    width:100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid;
+    background-color: transparent;
+    color: #000;
+    text-align: center;
+    outline: none;
+    font-weight: bolder;
+}
+.contact-section-textarea{
+    height:100px;
+    background-color: transparent;
+    color: #000;
+    text-align: center;
+    outline: none;
+    font-weight: bolder;
+    border:2px solid;
+    margin-top:12px;
+    border-radius: 12px;
+}
+.contact-section-submit{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px;
+    height:36px;
+    width: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 0px 18px;
+    border: 1px solid;
+    transition: all 0.2s ease-out;
+    margin: 20px auto;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.contact-section-submit:hover{
+    color: #fff;
+    background-color: #363434;
+}
+.contact-section-href{
+    margin-top: 50px;
+    height:60px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.contact-section-eachhref-one{
+    min-height:50px;
+    min-width:50px;
+    border-radius: 25px;
+    margin: 0px 20px;
+    background-image: url('./images/github.png');
+    background-size: cover;
+    border:1px solid;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.contact-section-eachhref-two{
+    height:50px;
+    width:50px;
+    border-radius: 25px;
+    margin: 0px 20px;
+    background-image: url('./images/instagram.jpg');
+    background-size: cover;
+    border:1px solid;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.contact-section-eachhref-three{
+    height:50px;
+    width:50px;
+    border-radius: 25px;
+    margin: 0px 20px;
+    background-image: url('./images/linkedIn.png');
+    background-size: cover;
+    border:1px solid;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+</style>
+<body>
+    <div class="main-background">
+        <header>
+            <h1 class="header-logo">CSEdge</h1>
+            <nav>
+                <a href="#" class="nav-items">Home</a>
+                <a href="#features" class="nav-items">Features</a>
+                <a href="#testimonial" class="nav-items">Testimonial</a>
+                <a href="#contact" class="nav-items">Contact</a>
+            </nav>
+        </header>
+        <hr>
+        <section id="home">
+            <div class="hero-section">
+                <h1 class="hero-section-title">CSEdge</h1>
+                <p class="hero-section-description">Where learning meets opportunity in</p>
+                <p class="hero-section-description">a month-long online internship</p>
+                <p class="hero-section-description">journey.</p>
+            </div>
+        </section>
+        <section id="features" class="feature-section">
+            <h1 class="feature-section-head">Features</h1>
+            <p class="feature-section-desc">⦾ CSEdge is an excellent platform that provides internships for new fresh graduates to gain practical experience. It is recognized as a verified company, instilling confidence in users that the internship opportunities offered here are genuine and valuable. CSEdge serves as a great starting point for new professionals in their career journey, fostering their growth and development.</p>
+            <p class="feature-section-desc">⦾ At CSEdge, the internship program offers a comprehensive learning experience. Proudly MSME Registered, AICTE Accredited, and recognized by LinkedIn, CSEdge internship includes WhatsApp support for quick queries, E-Certificate upon completion, and access to free resources. Join us at CSEdge to gain valuable skills and practical knowledge</p>
+            <p class="feature-section-desc">⦾ At CSEdge, the contact feature facilitates seamless communication with the team. Stay connected and informed by following the company on social media platforms like YouTube,Facebook, Instagram, and LinkedIn. For direct correspondence, feel free to reach out via Gmail. We're here to address inquiries and welcome feedback.</p>
+            <p class="feature-section-desc">⦾ (CSEdge) has a great user interface,It features a user-friendly design,Smooth navigation is also a highlight,Overall, it provides an excellent experience!</p>
+            <br>
+            <a href="https://csedge.courses/" class="feature-section-item">Click here to Visit (CSEdge)</a>
+        </section>
+        <section id="testimonial" class="testimonial-section">
+            <h1 class="testimonial-section-head">Testimonial</h1>
+            <div class="testimonial-container">
+                <p class="testimonial-desc">"My internship at CSEdge was a transformative experience. From day one, I was welcomed into a team of talented and supportive professionals who were always willing to share their knowledge. Working on real-world web development projects allowed me to apply my academic knowledge in practical ways and develop new skills rapidly. The mentorship and feedback I received were invaluable, and the collaborative environment fostered my growth as both a developer and a team member. I am grateful for the opportunity to have interned at CSEdge, and it has solidified my passion for web development."</p>
+                <p class="testimonial-name">-Azmatulla Khan</p><br>
+                <p class="testimonial-desc">"Interning at CSEdge was one of the best decisions I've made in my career. The hands-on experience I gained in web development was unparalleled. I had the chance to work on innovative projects that challenged me and helped me grow both technically and professionally. The team's dedication to fostering a learning environment was evident through their constant guidance and encouragement. This internship not only enhanced my coding skills but also taught me the importance of teamwork, communication, and problem-solving in a professional setting. I am proud to have been a part of the CSEdge team and highly recommend this internship to anyone looking to advance their career in tech."</p>
+                <p class="testimonial-name">-Balaji Chennupati</p>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h1 class="contact-section-head">Contact Us</h1>
+            <p class="contact-section-desc">-For more queries and repesctive information</p>
+            <div class="conatct-conatiner">
+                <label for="name" class="contact-section-label">Name</label>
+                <input type="text" id="name" class="contact-section-input" placeholder="Enter your name"><br><br>
+                <label for="email" class="contact-section-label">Email</label>
+                <input type="email" id="email" class="contact-section-input" placeholder="Enter your email"><br><br>
+                <label for="message" class="contact-section-label">Message</label>
+                <textarea type="text" id="message" class="contact-section-textarea" placeholder="Enter your message"></textarea>
+                <button class="contact-section-submit">Submit</button>
+                <div class="contact-section-href">
+                    <a target="_blank" href="https://github.com/CSEdgeOfficial"><button class="contact-section-eachhref-one"></button></a>
+                    <a target="_blank" href="https://www.instagram.com/csedgeofficial/"><button class="contact-section-eachhref-two"></button></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/csedge/"><button class="contact-section-eachhref-three"></button></a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
