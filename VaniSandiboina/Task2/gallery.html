@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Photo Gallery </title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1> Image Gallery </h1>
+                </div>
+                <div class="col-12">
+                    <div class="gallery">
+                        <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716546002/3390191_zplx1a.jpg" alt="Image 1" class="thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716546002/3390191_zplx1a.jpg')">
+                        <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716546002/3440660_mitsua.jpg" alt="Image 2" class="thumbnail " onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716546002/3440660_mitsua.jpg')">
+                        <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716546002/3461225_wanxnm.jpg" alt="Image 3" class="thumbnail " onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716546002/3461225_wanxnm.jpg')">
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="gallery">
+                        <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716545673/modern-smartphone-with-live-abstract-wallpaper-coming-out-screen_f1uyrq.jpg" alt="Image 4" class="thumbnail" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716545673/modern-smartphone-with-live-abstract-wallpaper-coming-out-screen_f1uyrq.jpg')">
+                        <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716545673/hand-holding-smartphone-with-abstract-wallpaper-coming-out-screen_1_cdgovk.jpg" alt="Image 5" class="thumbnail images" onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716545673/hand-holding-smartphone-with-abstract-wallpaper-coming-out-screen_1_cdgovk.jpg')">
+                        <img src="https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716545672/hand-holding-smartphone-with-abstract-wallpaper-coming-out-screen_mafbwq.jpg" alt="Image 6" class="thumbnail " onclick="openModal('https://res.cloudinary.com/dw5u1aaiq/image/upload/v1716545673/hand-holding-smartphone-with-abstract-wallpaper-coming-out-screen_mafbwq.jpg')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+
+</html>

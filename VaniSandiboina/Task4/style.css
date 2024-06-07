@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    color: #fff;
+}
+
+.CSEdge-logo {
+    height: 34px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: rgb(255, 217, 0);
+}
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#features {
+    padding: 50px;
+    text-align: center;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    color: #cc8ff2;
+}
+
+.feature {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials {
+    padding: 50px;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    text-align: center;
+    color: #fff;
+}
+
+.testimonial {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(100deg, rgb(48, 35, 174) 0%, rgb(242, 103, 152) 100%);
+    border-radius: 10px;
+    color: #fff;
+}
+
+#contact {
+    padding: 50px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
+    color: #cc8ff2;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form label {
+    margin: 10px 0 5px;
+}
+
+#contact form input,
+#contact form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid rgb(242, 103, 152);
+    border-radius: 5px;
+}
+
+#contact form button {
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background: linear-gradient(100deg, rgb(48, 35, 174) 0%, rgb(242, 103, 152) 100%);
+}
+
+#contact .social-media {
+    margin-top: 20px;
+}
+
+#contact .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(242, 103, 152);
+    transition: color 0.3s;
+}
+
+#contact .social-media a:hover {
+    color: rgb(48, 35, 174);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        width: 100%;
+        max-width: 300px;
+    }
+}
