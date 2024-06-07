@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-color: #f0f8ff;
+    color: #333;
+    
+}
+
+h1 {
+    color: #00509e;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00509e;
+}
+
+input,
+select,
+textarea {
+    width: 30%;
+    padding:8px;
+    box-sizing: border-box;
+    border: 1px solid #00509e;
+    border-radius: 4px;
+    background-color: #e6f7ff;
+    color: #00509e;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007acc;
+    background-color: #ccf0ff;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00509e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #003f7e;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
