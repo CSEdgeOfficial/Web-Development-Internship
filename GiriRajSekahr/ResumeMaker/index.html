@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume-maker-container">
+        <h1>Resume Maker</h1>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="career-level">Career Level</label>
+                <select id="career-level" required>
+                    <option value="entry">Entry Level</option>
+                    <option value="mid">Mid Level</option>
+                    <option value="senior">Senior Level</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="industry">Industry</label>
+                <select id="industry" required>
+                    <option value="tech">Technology</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="finance">Finance</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <textarea id="experience" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <textarea id="education" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills</label>
+                <textarea id="skills" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications</label>
+                <textarea id="certifications"></textarea>
+            </div>
+            <button type="submit">Generate Resume</button>
+        </form>
+        <div class="button-group">
+            <button id="download-pdf">Download as PDF</button>
+            <button id="download-html">Download as HTML</button>
+        </div>
+        <div id="resume-preview"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
