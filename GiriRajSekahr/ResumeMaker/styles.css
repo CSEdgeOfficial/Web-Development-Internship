@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+.resume-maker-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+h1 {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#resume-preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
