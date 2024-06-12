@@ -3,61 +3,70 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+.calculator {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
+.calculator input[type="button"] {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.question {
-    margin-bottom: 20px;
+.calculator input[type="text"] {
+    width: calc(100% - 10px);
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
 }
 
-.options {
+.calculator .row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.option {
-    width: 48%;
-    margin-bottom: 10px;
-    padding: 10px;
+.calculator .row .col {
+    width: 25%;
+}
+
+.calculator .row .col.clear {
+    width: 50%;
+}
+
+.calculator .row .col.clear input[type="button"] {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.calculator .row .col.operator input[type="button"] {
+    background-color: #008080;
+    color: #fff;
+}
+
+.calculator .row .col.equal input[type="button"] {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.calculator .row .col.numeric input[type="button"] {
     background-color: #f0f8ff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.option:hover {
-    background-color: #add8e6;
-}
-
-.result {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.result h2 {
-    color: #007bff;
-}
-
-.timer {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.timer span {
-    font-size: 24px;
-    color: #007bff;
+    color: #000;
 }
