@@ -1,0 +1,82 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    box-sizing: border-box; 
+}
+
+/* Header */
+h1 {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+    text-transform: capitalize;
+    color: azure;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 30px;
+}
+
+/* Quiz and Result Sections */
+.quiz, .result {
+    width: 100%; 
+    max-width: 50%;
+    margin: 50px auto;
+    padding: 40px;
+    font-size: x-large;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(186, 7, 7, 0.1);
+}
+
+.options {
+    margin-top: 10px;
+}
+
+.options label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.timer {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.result {
+    display: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+button#previousB {
+    background-color: #6c757d;
+    color: black;
+}
+
+button#nextB {
+    background-color: #17a2b8;
+    color: white;
+}
+
+button#submitB {
+    background-color: #ffc107;
+    color: black;
+}
+
+button:hover {
+    border-radius: 15px;
+}
