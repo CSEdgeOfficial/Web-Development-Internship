@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(200deg, #326ada, #30033b);
+    padding: 10px;
+}
+
+.app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 50px 50px 70px;
+    border-radius: 20px;
+}
+
+.app h1 {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.app h1 todo-image {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-size: large;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(56, 216, 56);
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+ul li {
+    list-style-type: none;
+    font-size: large;
+    padding: 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 45px;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("Assets/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+
+ul li.checked {
+    color: black;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("Assets/checked.png");
+}
+
+.delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+}
