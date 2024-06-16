@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="quiz-container">
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="options"></div>
+                <div id="feedback"></div>
+                <div id="timer">Time remaining: <span id="time">30</span> seconds</div>
+            </div>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button onclick="startQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+ <footer>make by &copy; ayaz shaik </footer>
+</body>
+</html>
