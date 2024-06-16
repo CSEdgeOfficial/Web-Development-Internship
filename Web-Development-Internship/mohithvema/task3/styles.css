@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#quiz-container {
+    
+    border-radius: 30px;
+    
+    padding: 20px;
+    width: 300px;
+}
+#timer{
+    text-align: center;
+}
+#question, #timer {
+    margin-bottom: 20px;
+    background-color: yellowgreen;
+}
+
+#options {
+    margin-bottom: 20px;
+    display: block;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#result {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: aqua;
+}
+#start-button{
+    font-size: 50px;
+    font-family: cursive;
+    border-radius: 40px;
+    animation-name: startbtn;
+    animation-duration: 3s;
+    
+}
+@keyframes startbtn{
+    from{
+        font-size: 50px;
+    font-family: cursive;
+    border-radius: 40px;
+
+    }
+    to{
+        height: 250px;
+        width: 300px;
+        font-size: 50px;
+    font-family: cursive;
+    border-radius:50%;
+    background-color: lightsalmon;
+    }
+}
+#start-button:hover{
+    background-color: lightseagreen;
+}
+body{
+    background-color: lightblue;
+}
+#heading{
+    display: block;
+    position: absolute;
+    top:50px;
+    left:520px;
+}
+#review-button{
+    background-color: blueviolet;
+    display: block;
+    position: absolute;
+    left:0px;
+}
