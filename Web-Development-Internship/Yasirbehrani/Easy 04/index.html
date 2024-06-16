@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Enrollment Form</title>
+<style>
+    form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.error + br {
+    display: none;
+}
+h2{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Student Enrollment Form</h2>
+
+<form id="enrollmentForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <span id="nameError" class="error"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="text" id="phone" name="phone"><br>
+    <span id="phoneError" class="error"></span><br>
+
+    <label for="course">Course Selection:</label><br>
+    <select id="course" name="course">
+        <option value="">Select Course</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Science">Science</option>
+        <option value="Literature">Literature</option>
+    </select><br>
+
+    <label for="comments">Additional Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var course = document.getElementById("course").value;
+
+    var nameError = document.getElementById("nameError");
+    var emailError = document.getElementById("emailError");
+    var phoneError = document.getElementById("phoneError");
+
+    var isValid = true;
+
+    if (name === "") {
+        nameError.textContent = "Name is required";
+        isValid = false;
+    } else {
+        nameError.textContent = "";
+    }
+
+    if (email === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        emailError.textContent = "Invalid email format";
+        isValid = false;
+    } else {
+        emailError.textContent = "";
+    }
+
+    if (phone === "") {
+        phoneError.textContent = "Phone number is required";
+        isValid = false;
+    } else if (!validatePhone(phone)) {
+        phoneError.textContent = "Invalid phone number format";
+        isValid = false;
+    } else {
+        phoneError.textContent = "";
+    }
+
+    if (course === "") {
+        alert("Please select a course");
+        isValid = false;
+    }
+
+    return isValid;
+}
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+function validatePhone(phone) {
+    var re = /^\d{10}$/;
+    return re.test(phone);
+}
+</script>
+
+</body>
+</html>

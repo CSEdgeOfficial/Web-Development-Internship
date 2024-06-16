@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic To-Do List</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="list">
+        <p><u><b>Dynamic To-Do List</b></u></p>
+    </div>
+<div class="container">
+    <h1>List container</h1>
+    <input id="taskInput" type="text" placeholder="Add a task">
+    <input id="priorityInput" type="number" placeholder="Priority (1-5)">
+    <input id="dueDateInput" type="date">
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="sortTasks('priority')">Sort by Priority</button>
+    <button onclick="sortTasks('dueDate')">Sort by Due Date</button>
+    <button onclick="sortTasks('completed')">Sort by Completion Status</button>
+    <ul id="taskList"></ul>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
