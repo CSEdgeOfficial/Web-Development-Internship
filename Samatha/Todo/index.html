@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> To-Do List🗒 </h1>
+        <input type="text" id="taskInput" placeholder="Enter Task To Do">
+        <button onclick="addTask()">Tap Here To Add Task </button>
+        
+        <ul id="taskList"></ul>
+        
+        <div>
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect" onchange="sortTasks()">
+                <option value="priority">Priority</option>
+                <option value="dueDate">Due Date</option>
+                <option value="completion">Completion Status</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
