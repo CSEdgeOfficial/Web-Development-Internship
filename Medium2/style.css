@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background-image: linear-gradient( to bottom left, rgb(73, 73, 223), rgb(208, 75, 75));
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.App{
+    background:rgb(246, 243, 243);
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    padding: 30px 10px;
+    border-radius: 15px;
+}
+
+.timer{
+    color:rgb(137, 7, 244);
+    margin: auto;
+}
+
+.App > h1, .Q{
+    padding: 10px;
+    font-weight: 600;
+}
+
+.main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.main h1{
+    padding: 10px;
+    font-size: 28px;
+}
+
+.main ul{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#ansButtons .button{
+    text-align:start;
+    padding: 15px;
+    font-weight:600;
+    font-size: 16px;
+    margin: 7px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    width: 98%;
+    border:rgb(39, 135, 135) 1px solid;
+    background-color: rgb(137, 7, 244);
+    transition: all 0.3s;
+}
+
+#ansButtons .button:hover:not([disabled]){
+    background-color: rgb(54, 53, 53);  
+    color: white;
+    cursor: pointer;
+}
+
+.button:disabled{
+    cursor:no-drop;
+}
+
+.main button:hover{
+    background-color: rgb(54, 53, 53);  
+    color: white;
+}
+
+.main > button{
+    background-color: black;
+    color: #f4f3f3;
+    padding: 10px 15px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+}
