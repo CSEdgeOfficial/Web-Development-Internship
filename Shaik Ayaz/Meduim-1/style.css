@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction:column;
+    background-color: #eee;
+}
+
+.todo-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input:hover{
+    color:#fff;
+    background-color: black;
+    border:1px solid #fff;
+}
+button {
+    padding: 10px;
+    border: none;
+    background-color:yellow;
+    border:2px solid black;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: black;
+    color:yellow;
+    border:yellow 2px solid;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.task-buttons button {
+    background: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.task-buttons button:hover{
+    color:#007bff;
+    border:2px solid #007bff;
+    background-color:  black;
+}
+
+footer{
+  margin-top:20px;
+  }
+
+.task-buttons button.delete {
+    background: #dc3545;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.task-buttons button.delete:hover {
+    background: black;
+    color:#dc3545;
+    border:2px solid #dc3545;
+}
+
+.task-buttons button.complete {
+    background: #28a745;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.task-buttons button.complete:hover{
+    color: #28a745;
+    background-color:black;
+    border: 2px solid #28a745;
+
+}
