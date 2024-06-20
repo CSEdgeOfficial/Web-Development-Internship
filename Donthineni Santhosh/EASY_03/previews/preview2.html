@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <title>Easy_02</title>
+</head>
+<style>
+*{
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: #000;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.main-background{
+    height: 846px;
+    width:1492px;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid #fff; */
+}
+.main-conatainer-head{
+    font-size: 36px;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.gallery-holder{
+    height:700px;
+    width:1300px;
+    border-radius: 12px;
+    text-align: center;
+    /* border: 1px solid #fff; */
+    overflow-x:scroll ;
+}
+.a{
+    max-height:650px;
+    max-width:1100px;
+    margin:0px;
+}
+.image-one{
+    height:650px;
+    width:1000px;
+    margin: 50px 0px;
+    border-radius: 12px;
+}
+.span{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left:-200px;
+    top:500px;
+}
+span{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 22px;
+    transform: rotate(90deg);
+}
+</style>
+<body>
+    <div class="main-background">
+        <h1 class="main-conatainer-head">Light Box Gallery</h1>
+        <div class="gallery-holder">
+            <a href="./gallery/1.jpg" class="a"><img src="./gallery/1.jpg" alt="Image1" class="image-one"></a>
+            <a href="./gallery/2.jpg" class="a"><img src="./gallery/2.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/3.jpg" class="a"><img src="./gallery/3.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/4.jpg" class="a"><img src="./gallery/4.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/5.jpg" class="a"><img src="./gallery/5.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/6.jpg" class="a"><img src="./gallery/6.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/7.jpg" class="a"><img src="./gallery/7.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/8.jpg" class="a"><img src="./gallery/8.jpg" alt="Image" class="image-one"></a>
+            <a href="./gallery/9.jpg" class="a"><img src="./gallery/9.jpg" alt="Image" class="image-one"></a>
+        </div>
+    </div>
+    <div class="span">
+        <span>S</span>
+        <span>C</span>
+        <span>R</span>
+        <span>O</span>
+        <span>L</span>
+        <span>L</span>
+        <span>D</span>
+        <span>O</span>
+        <span>W</span>
+        <span>N</span>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script>
+        lightGallery(document.querySelector('.gallery-holder'));
+    </script>
+</body>
+</html>
