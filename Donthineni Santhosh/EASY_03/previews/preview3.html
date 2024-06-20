@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment</title>
+</head>
+<style>
+    *{
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    background-image:linear-gradient(360deg, #0a0804,#1d1611);
+}
+.main-container{
+    height:850px;
+    width:1492px;
+    background-image: url('./images/bg-task04.jpg');
+    background-size: cover;
+}
+.main-container-button{
+    border: none;
+    background-color: transparent;
+    height:50px;
+    width:200px;
+    position: relative;
+    top:400px;
+    left:300px;
+    border-radius: 14px;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-out;
+}
+.main-container-button:hover{
+    height:60px;
+    width:210px;
+    top:395px;
+    left: 295px;
+    font-size: 15px;
+    border: 0.5px solid #fff;
+}
+.hidden{
+    display: none;
+}
+.enrollment-container-hidden{
+    display: none;
+}
+.enrollment-container-visible{
+    display: block;
+    background-image:url('./images/bg-task04.jpg');
+    background-size: cover;
+    height:850px;
+    width:1492px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enrollment-div{
+    border:1px solid #fff;
+    height:700px;
+    width:600px;
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    animation: enrollment-div-animation 1s ease-in-out 0s;
+}
+@keyframes enrollment-div-animation {
+    0%{position: relative; left:-1200px}
+    90%{position: relative;left:20px}
+    95%{position: relative;left: -5px;}
+    100%{position: relative;left:0px}
+}
+.enrollment-div-label{
+    font-size: 18px;
+    font-weight: bolder;
+    margin:0px;
+    margin: 0px 0px 12px 0px;
+}
+.enrollment-div-input{
+    height:35px;
+    border-top:none ;
+    border-right:none ;
+    border-left:none ;
+    border-bottom:1px solid #fff ;
+    background-color: transparent;
+    outline: none;
+    padding: 0px 12px;
+    margin:0px;
+}
+.enrollment-div-select{
+    height:35px;
+    border:1px solid #fff;
+    background-color: transparent;
+    outline: none;
+    padding: 0px 12px;
+    margin:0px;
+    border-radius: 12px;
+    font-weight: bolder;
+}
+option{
+    color: #000;
+    font-weight: bolder;
+}
+textarea{
+    background-color: transparent;
+    outline: none;
+    user-select: none;
+    resize: none;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 12px;
+    height:100px;
+}
+.enrollment-div-button{
+    border: 1px solid;
+    background-color: transparent;
+    height:50px;
+    width:200px;
+    border-radius: 14px;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    margin: 0px auto;
+    transition: all 0.2s ease-in;
+}
+.enrollment-div-button:hover{
+    border: none;
+    font-size: 15px;
+    background-color: #fff;
+    color: #000;
+}
+.span-hidden{
+    display: none;
+}
+.span-visible{
+    display: block;
+    font-weight: 100;
+    color: red;
+    font-size: 14px;
+}
+h1{
+    text-decoration: underline;
+}
+</style>
+<body>
+    <div class="main-container" id="main_container">
+        <button class="main-container-button" onclick="Clicked()">Get Enrolled</button>
+    </div>
+    <div class="enrollment-container-hidden" id="enrollment_container">
+        <form id="enrollmentForm" onsubmit="return checkDetails()">
+            <div class="enrollment-div">
+                <h1>Student Enrollment</h1>
+                <label for="name" class="enrollment-div-label">Name* <span class="span-hidden" id="span_name">name should only contain alphabets</span></label>
+                <input type="text" class="enrollment-div-input" id="name" placeholder="Enter your registered name" required><br><br>
+                <label for="name" class="enrollment-div-label">Email*</label>
+                <input type="email" class="enrollment-div-input" id="email" placeholder="Enter your email" required><br><br>
+                <label for="number" class="enrollment-div-label">Mobile Number* <span class="span-hidden" id="span_number">Number must contain only 0-9 digits</span></label>
+                <input type="text" class="enrollment-div-input" id="number" placeholder="Enter your registered mobile number" required minlength="10" maxlength="10"><br><br>
+                <label for="courses" class="enrollment-div-label">Select Your Course*</label>
+                <select name="select-course" id="courses" class="enrollment-div-select" required>
+                    <option value="">Select the Course</option>
+                    <option value="Course 1">Course 1</option>
+                    <option value="Course 2">Course 2</option>
+                    <option value="Course 3">Course 3</option>
+                    <option value="Course 4">Course 4</option>
+                    <option value="Course 5">Course 5</option>
+                    <option value="Course 6">Course 6</option>
+                    <option value="Course 7">Course 7</option>
+                    <option value="Course 8">Course 8</option>
+                    <option value="Course 9">Course 9</option>
+                    <option value="Course 10">Course 10</option>
+                </select><br><br>
+                <label for="additional_comments" class="enrollment-div-label">Additional Comments</label>
+                <textarea name="additionalcomments" id="additional_comments" cols="0" rows="0"></textarea><br><br>
+                <button type="submit" class="enrollment-div-button">Enroll</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function Clicked(){
+    document.getElementById('main_container').className='hidden'
+    document.getElementById('enrollment_container').className='enrollment-container-visible'
+}
+
+function checkName(name){
+    for(let i=0;i<name.length;i++){
+        if(!((name[i]>='a' && name[i]<='z') || (name[i]==' ')))
+            return false
+    }
+    return true
+}
+
+function checkNumber(number){
+    for(let i=0;i<number.length;i++){
+        if(!(number[i]>='0' && number[i]<='9'))
+            return false
+    }
+    return true
+}
+
+
+function checkDetails(){
+    let name=document.getElementById('name').value
+    let number=document.getElementById('number').value
+    
+    name=name.toLowerCase()
+
+    let isNameTrue=checkName(name)
+    let isNumberTrue=checkNumber(number)
+
+    if(isNumberTrue && isNameTrue){
+        alert('Enrollment Successfull\n'+
+              'Name: '+document.getElementById('name').value+
+              '\nMobile Number: '+number+
+              '\nEmail: '+document.getElementById('email').value+
+              '\nRegistered Course: '+document.getElementById('courses').value)
+        return true
+    }
+    else{
+        if(!isNameTrue)
+            document.getElementById('span_name').className='span-visible'
+        return false
+    }
+
+}
+    </script>
+</body>
+</html>
