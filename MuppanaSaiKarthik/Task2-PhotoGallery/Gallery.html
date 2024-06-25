@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <title>My Lightbox Photo Gallery</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                transition: all .2s linear;
+            }
+
+            .lightGallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            body {
+                background: #113e86;
+            }
+
+            .lightGallery a {
+                width: 200px;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+                display: block;
+                border-radius: 5px;
+                margin: 20px;
+                box-shadow: 0 2px 4px #09285b;
+            }
+
+            .lightGallery a img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .lightGallery a img:hover {
+                transform: scale(1.5);
+            }
+
+            h1 {
+                font-size: 50px;
+                margin-top: 10;
+                color: #e6c3c3;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                box-shadow: #bb1616;
+            }
+
+            h1:hover {
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>My Lightbox Photo Gallery</h1>
+        <div class="lightGallery">
+            <!-- Thumbnails of images -->
+            <a href="Pics/1.jpg">
+                <img src="Pics/1.jpg" alt="Image 1">
+            </a>
+            <a href="Pics/2.jpg">
+                <img src="Pics/2.jpg" alt="Image 2">
+            </a>
+            <a href="Pics/3.jpg">
+                <img src="Pics/3.jpg" alt="Image 3">
+            </a>
+            <a href="Pics/4.jpg">
+                <img src="Pics/4.jpg" alt="Image 4">
+            </a>
+            <a href="Pics/5.jpg">
+                <img src="Pics/5.jpg" alt="Image 5">
+            </a>
+            <a href="Pics/6.jpg">
+                <img src="Pics/6.jpg" alt="Image 6">
+            </a>
+            <a href="Pics/7.jpg">
+                <img src="Pics/7.jpg" alt="Image 7">
+            </a>
+            <a href="Pics/8.jpg">
+                <img src="Pics/8.jpg" alt="Image 8">
+            </a>
+            <a href="Pics/9.jpg">
+                <img src="Pics/9.jpg" alt="Image 9">
+            </a>
+            <a href="Pics/10.jpg">
+                <img src="Pics/10.jpg" alt="Image 10">
+            </a>
+            <a href="Pics/11.jpg">
+                <img src="Pics/11.jpg" alt="Image 11">
+            </a>
+            <a href="Pics/12.jpg">
+                <img src="Pics/12.jpg" alt="Image 12">
+            </a>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+        <script>
+            lightGallery(document.querySelector('.lightGallery'))
+        </script>
+    </body>
+    <footer style="text-align: center; color: azure;">
+        <p style="padding-top: 25px;padding-bottom: 10px;"> All rights reserved by MUPPANA SAI KARTHIK.</p>
+        <p style="padding-bottom: 20px;">Designed in 2024</p>
+    </footer>
+</html>

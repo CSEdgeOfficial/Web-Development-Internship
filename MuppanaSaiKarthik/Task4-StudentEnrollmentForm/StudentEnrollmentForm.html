@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Enrollment Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Student Enrollment Form</h2>
+    <form id="enrollmentForm" onsubmit="validateForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+      
+      <label for="course">Course Selection:</label>
+      <select id="course" name="course" required>
+        <option value="">Select a course</option>
+        <option value="biology">Biology</option>
+        <option value="history">History</option>
+        <option value="math">Mathematics</option>
+        <!-- Add more options as needed -->
+      </select>
+      
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <p id="error-message" class="error-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
