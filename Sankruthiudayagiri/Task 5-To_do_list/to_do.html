@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Application</title>
+    <link rel="stylesheet" href="to_do.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="form-group">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <select id="priorityInput">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <input type="date" id="dueDateInput">
+            <button id="addTaskButton">Add Task</button>
+        </div>
+        <div class="sort-group">
+            <label for="sortTasks">Sort by:</label>
+            <select id="sortTasks">
+                <option value="priority">Priority</option>
+                <option value="dueDate">Due Date</option>
+                <option value="status">Status</option>
+            </select>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="to_do.js"></script>
+</body>
+</html>
