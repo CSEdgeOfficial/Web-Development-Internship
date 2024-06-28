@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Maker</h1>
+        
+        <div class="template-selection">
+            <h2>Select a Template</h2>
+            <select id="templateSelector">
+                <option value="entryLevel">Entry Level</option>
+                <option value="midLevel">Mid Level</option>
+                <option value="seniorLevel">Senior Level</option>
+                <option value="industrySpecific">Industry Specific</option>
+            </select>
+        </div>
+        
+        <div class="customization">
+            <h2>Customize Your Resume</h2>
+            
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" placeholder="Enter your full name">
+            
+            <label for="contactInfo">Contact Information:</label>
+            <input type="text" id="contactInfo" placeholder="Enter your contact information">
+            
+            <label for="experience">Experience:</label>
+            <textarea id="experience" placeholder="Enter your experience"></textarea>
+            
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Enter your education"></textarea>
+            
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="Enter your skills"></textarea>
+            
+            <label for="certifications">Certifications:</label>
+            <textarea id="certifications" placeholder="Enter your certifications"></textarea>
+        </div>
+        
+        <div class="preview">
+            <h2>Preview</h2>
+            <div id="resumePreview"></div>
+        </div>
+        
+        <button onclick="generateResume()">Generate Resume</button>
+        <button onclick="exportToPDF()">Export as PDF</button>
+        <button onclick="exportToHTML()">Export as HTML</button>
+    </div>
+    
+    <script src="resume.js"></script>
+</body>
+</html>

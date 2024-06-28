@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Readme Generator</title>
+    <link rel="stylesheet" href="git.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Profile Readme Generator</h1>
+        <div class="template-selection">
+            <h2>Select a Template</h2>
+            <select id="templateSelector">
+                <option value="basic">Basic Template</option>
+                <option value="projectShowcase">Project Showcase Template</option>
+                <option value="skillsShowcase">Skills Showcase Template</option>
+            </select>
+        </div>
+        <div class="customization">
+            <h2>Customize Your Profile</h2>
+            <label for="profilePicture">Profile Picture URL:</label>
+            <input type="text" id="profilePicture" placeholder="Enter image URL">
+            
+            <label for="bio">Bio:</label>
+            <textarea id="bio" placeholder="Enter your bio"></textarea>
+            
+            <label for="socialLinks">Social Media Links (comma-separated):</label>
+            <input type="text" id="socialLinks" placeholder="e.g. Twitter: https://twitter.com/username, LinkedIn: https://linkedin.com/in/username">
+            
+            <label for="projects">Project Highlights (comma-separated):</label>
+            <input type="text" id="projects" placeholder="e.g. Project1: Description1, Project2: Description2">
+        </div>
+        <div class="preview">
+            <h2>Preview</h2>
+            <div id="readmePreview"></div>
+        </div>
+        <button onclick="generateReadme()">Generate README</button>
+    </div>
+    <script src="git.js"></script>
+</body>
+</html>
